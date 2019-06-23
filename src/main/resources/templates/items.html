@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+    <style>
+          body {background-color: #c7b39b;}
+    </style>
+</head>
+<body>
+
+<table border = 2>
+    <thead>
+      <tr>
+        <th>&nbsp;Номер&nbsp;</th>
+        <th>&nbsp;Наименование товара&nbsp;</th>
+        <th>&nbsp;Цена&nbsp;</th>
+        <th>&nbsp;Остаток&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr align="center" th:each="item : ${items}">
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.price}"></td>
+        <td th:text="${item.count}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>
