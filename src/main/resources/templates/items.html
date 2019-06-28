@@ -8,6 +8,8 @@
     <style>
           body {background-color: #c7b39b;}
 	      button.back {
+	             width: 200px;
+                 height: 30px;
 	             color: #000;
 	             background: #FFA500;
 	             padding: 5px;
@@ -16,8 +18,28 @@
 	             position: absolute;
                  top: 10px;
                  right: 30px;
+                 vertical-align: middle;
 	           }
 	        button.back:hover {
+	        background: #FF6347;
+	      }
+	      button.basket {
+	             width: 200px;
+                 height: 30px;
+	             color: #000;
+	             background: #FFA500;
+	             padding: 5px;
+	             border-radius: 10px;
+	             border: 2px solid #FF8247;
+	             position: absolute;
+                 top: 50px;
+                 right: 30px;
+                 vertical-align: middle;
+	           }
+	        button.back:hover {
+	        background: #FF6347;
+	      }
+	      	button.basket:hover {
 	        background: #FF6347;
 	      }
 
@@ -25,14 +47,15 @@
 </head>
 <body>
 
-<table border = 2>
+<table border=2>
     <thead>
-      <tr>
+    <tr>
         <th>&nbsp;Номер&nbsp;</th>
         <th>&nbsp;Наименование товара&nbsp;</th>
         <th>&nbsp;Цена&nbsp;</th>
         <th>&nbsp;Остаток&nbsp;</th>
-      </tr>
+        <th>&nbsp;&nbsp;</th>
+    </tr>
     </thead>
     <tbody>
     <tr align="center" th:each="item : ${items}">
@@ -40,13 +63,15 @@
         <td th:text="${item.name}"></td>
         <td th:text="${item.price}"></td>
         <td th:text="${item.count}"></td>
+        <td text=""><b>В корзину</b></td>
     </tr>
     </tbody>
 </table>
 <form action="/login" method="get">
-    <button class="back"><b><--Назад</b></button>
+    <button class="back"><b>Выход</b></button>
 </form>
-
+<form action="/basket" method="get">
+    <button class="basket"><b>Корзина</b></button>
+</form>
 </body>
-
 </html>
