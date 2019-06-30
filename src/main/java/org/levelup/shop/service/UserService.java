@@ -1,6 +1,6 @@
 package org.levelup.shop.service;
 
-import org.levelup.shop.domain.entity.dto.User;
+import org.levelup.shop.domain.dto.User;
 
 import java.util.Collection;
 

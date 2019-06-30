@@ -1,8 +1,9 @@
-package org.levelup.shop.service;
+package org.levelup.shop.service.impl;
 
 import org.levelup.shop.domain.entity.ItemEntity;
-import org.levelup.shop.domain.entity.dto.Item;
+import org.levelup.shop.domain.dto.Item;
 import org.levelup.shop.repository.ItemRepository;
+import org.levelup.shop.service.ShopService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

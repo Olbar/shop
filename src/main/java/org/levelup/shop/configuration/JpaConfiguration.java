@@ -1,6 +1,8 @@
 package org.levelup.shop.configuration;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.flywaydb.core.Flyway;
+import org.flywaydb.core.api.MigrationVersion;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +24,8 @@ public class JpaConfiguration {
     private String username;
     @Value("${shop.db.password}")
     private String password;
+    @Value("${shop.db.version}")
+    private String version;
 
 
    @Bean
@@ -32,4 +36,11 @@ public class JpaConfiguration {
        dataSource.setJdbcUrl(String.format("jdbc:postgresql://%s:%s/%s", host, port, dbName));
        return dataSource;
    }
+    @Bean(initMethod = "migrate")
+    public Flyway flyway(DataSource dataSource) {
+        Flyway flyway = new Flyway();
+        flyway.setDataSource(dataSource);
+        flyway.setTarget(MigrationVersion.fromVersion(version));
+        return flyway;
+    }
 }

@@ -1,8 +1,9 @@
-package org.levelup.shop.service;
+package org.levelup.shop.service.impl;
 
-import org.levelup.shop.AuthenticationException;
+
 import org.levelup.shop.domain.entity.UserEntity;
 import org.levelup.shop.repository.UserRepository;
+import org.levelup.shop.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +21,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public boolean authenticate(String login, String password)  {
         UserEntity entity = userRepository.findByLogin(login);
-        if (entity != null && entity.getPassword().equals(password)) {
-            return true;
-        }
-            return false;
-       // throw new AuthenticationException();
+        return entity != null && entity.getPassword().equals(password);
     }
 }

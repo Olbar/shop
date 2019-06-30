@@ -1,8 +1,12 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
 <head>
+
+    <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
+    <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
+    <link href="../static/css/login.css" th:href="@{/css/items.css}" rel="stylesheet" />
+
+</head>
     <meta charset="UTF-8">
     <title>Items</title>
     <style>
@@ -68,7 +72,7 @@
     </tbody>
 </table>
 <form action="/login" method="get">
-    <button class="back"><b><--Выход--></b></button>
+    <button class="back"><b>Выход</b></button>
 </form>
 <form action="/basket" method="get">
     <button class="basket"><b>Корзина</b></button>
