@@ -1,0 +1,38 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.wc-categories {
+    width: 500px;
+}
+
+.wc-rooms h2 {
+    text-align: center;
+}
+
+.wc-room-block {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cecece;
+    border-radius: 7px;
+    margin: 5px 0 5px 0;
+}
+
+.wc-room-block:hover {
+    background-color: #65b6c3;
+    border-color: #1c7430;
+}
+
+.wc-room-block a {
+    color: #1b1e21;
+}
+
+.wc-room-block a:hover {
+    color: #1b1e21;
+    text-decoration: none;
+}

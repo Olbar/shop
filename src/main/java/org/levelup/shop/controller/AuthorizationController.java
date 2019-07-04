@@ -49,6 +49,6 @@ public class AuthorizationController {
         response.addCookie(new Cookie("WC_SESSION", session.getSid()));
         System.out.println(response);
         System.out.println(session.getSid());
-        return "redirect:/items";
+        return "redirect:/categories";
     }
 }

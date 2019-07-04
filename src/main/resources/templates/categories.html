@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
+    <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
+    <link href="../static/css/category.css" th:href="@{/css/category.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div class="content">
+
+    <div class="wc-categories">
+        <h2>List of categories</h2>
+
+        <div>
+            <div th:each="category : ${categories}" class="wc-category-block">
+                <a th:href="@{'/category/' + ${category.id}}" th:text="${category.name}"></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

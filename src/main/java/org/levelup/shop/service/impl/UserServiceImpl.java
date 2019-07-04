@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends AbstractService implements UserService {
 
     private final AuthenticationService authenticationService;
     private final UserRepository userRepository;
@@ -23,6 +23,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     public UserServiceImpl(AuthenticationService authenticationService, UserRepository userRepository, ModelMapper modelMapper) {
+        super(modelMapper);
         this.authenticationService = authenticationService;
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
@@ -31,8 +32,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Collection<User> getAll() {
         Iterable<UserEntity> iterable = userRepository.findAll();
-        return StreamSupport.stream(iterable.spliterator(),false).map(entity->modelMapper.map(entity, User.class))
-                .collect(Collectors.toList());
+        return findAllEntities(iterable,User.class);
     }
 
 

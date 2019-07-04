@@ -11,8 +11,28 @@ public class ItemEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String article_number;
     private Double price;
     private Integer count;
+    private Integer category_id;
+
+    public String getArticle_number() {
+        return article_number;
+    }
+
+    public void setArticle_number(String article_number) {
+        this.article_number = article_number;
+    }
+
+    public Integer getCategory_id() {
+        return category_id;
+    }
+
+    public void setCategory_id(Integer category_id) {
+        this.category_id = category_id;
+    }
+
+
 
     public Integer getId() {
         return id;
