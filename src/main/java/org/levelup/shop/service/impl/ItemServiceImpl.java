@@ -3,7 +3,7 @@ package org.levelup.shop.service.impl;
 import org.levelup.shop.domain.entity.ItemEntity;
 import org.levelup.shop.domain.dto.Item;
 import org.levelup.shop.repository.ItemRepository;
-import org.levelup.shop.service.ShopService;
+import org.levelup.shop.service.ItemService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,21 +13,20 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
-public class ShopServiceImpl implements ShopService {
+public class ItemServiceImpl extends AbstractService implements ItemService {
 
     private final ItemRepository itemRepository;
-    private final ModelMapper modelMapper;
 
     @Autowired
-    public ShopServiceImpl(ItemRepository itemRepository,ModelMapper modelMapper) {
+    public ItemServiceImpl(ItemRepository itemRepository, ModelMapper modelMapper) {
+        super(modelMapper);
         this.itemRepository = itemRepository;
-        this.modelMapper = modelMapper;
     }
 
     @Override
-    public Collection<Item> getAll() {
-        Iterable<ItemEntity> iterable = itemRepository.findAll();
-        return StreamSupport.stream(iterable.spliterator(),false).map(entity->modelMapper.map(entity, Item.class))
-                .collect(Collectors.toList());
+    public Collection<Item> findAllItemsInCategory(Integer categoryId) {
+        Iterable<ItemEntity> values = itemRepository.findByCategoryId(categoryId);
+        return findAllEntities(values, Item.class);
     }
+
 }

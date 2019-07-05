@@ -9,11 +9,11 @@
     width: 500px;
 }
 
-.wc-rooms h2 {
+.wc-categories h2 {
     text-align: center;
 }
 
-.wc-room-block {
+.wc-category-block {
     height: 30px;
     display: flex;
     align-items: center;
@@ -23,16 +23,16 @@
     margin: 5px 0 5px 0;
 }
 
-.wc-room-block:hover {
+.wc-category-block:hover {
     background-color: #65b6c3;
     border-color: #1c7430;
 }
 
-.wc-room-block a {
+.wc-category-block a {
     color: #1b1e21;
 }
 
-.wc-room-block a:hover {
+.wc-category-block a:hover {
     color: #1b1e21;
     text-decoration: none;
 }

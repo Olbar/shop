@@ -5,7 +5,7 @@ import org.levelup.shop.domain.dto.Item;
 import java.util.Collection;
 
 
-public interface ShopService {
-    Collection<Item> getAll();
+public interface ItemService {
+    Collection<Item> findAllItemsInCategory(Integer categoryId);
 
 }

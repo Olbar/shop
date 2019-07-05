@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class CategoryEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
     private String name;
     private boolean active;
@@ -19,8 +20,5 @@ public class CategoryEntity {
     public CategoryEntity() {
         this.active = true;
     }
-
-
-
 
 }

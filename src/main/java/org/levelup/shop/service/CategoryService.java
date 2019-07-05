@@ -7,4 +7,6 @@ import java.util.Collection;
 
 public interface CategoryService {
     Collection<Category> findAll();
+
+    Category findById(Integer categoryId);
 }

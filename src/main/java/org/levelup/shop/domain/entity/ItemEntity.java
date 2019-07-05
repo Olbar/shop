@@ -1,9 +1,15 @@
 package org.levelup.shop.domain.entity;
 
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+@Setter
+@Getter
 @Entity
+@NoArgsConstructor
 @Table(name = "items")
 public class ItemEntity {
 
@@ -16,55 +22,7 @@ public class ItemEntity {
     private Integer count;
     private Integer category_id;
 
-    public String getArticle_number() {
-        return article_number;
-    }
-
-    public void setArticle_number(String article_number) {
-        this.article_number = article_number;
-    }
-
-    public Integer getCategory_id() {
-        return category_id;
-    }
-
-    public void setCategory_id(Integer category_id) {
-        this.category_id = category_id;
-    }
-
-
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }
-
-
+    @ManyToOne
+    @JoinColumn(name = "category_id",insertable = false, updatable = false)
+    private CategoryEntity category;
 }

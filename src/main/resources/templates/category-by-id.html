@@ -6,6 +6,7 @@
     <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
     <link href="../static/css/category.css" th:href="@{/css/category.css}" rel="stylesheet" />
+    <link href="../static/css/category-by-id.css" th:href="@{/css/category-by-id.css}" rel="stylesheet" />
 
 </head>
 
@@ -14,13 +15,13 @@
 <div class="content">
 
     <div class="wc-categories">
-        <h2>List of categories</h2>
+        <!--<h2>Category ${category.name}</h2>-->
+        <h2 th:text="@{'Category: ' + ${category.name}}"></h2>
 
         <div>
-            <div th:each="category : ${categories}" class="wc-category-block">
-                <a th:href="@{'/categories/' + ${category.id}}" th:text="${category.name}"></a>
-            </div>
+            <div th:each="item : ${items}" class="wc-item" th:text="${item.name}"></div>
         </div>
+
     </div>
 
 </div>

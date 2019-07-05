@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ItemRepository extends CrudRepository<ItemEntity, Integer> {
 
-    ItemEntity findByName(String name);
+    Iterable<ItemEntity> findByCategoryId(Integer categoryId);
 }
