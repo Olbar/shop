@@ -9,6 +9,6 @@ import java.util.Collection;
 public interface FeedbackService {
 
     Collection<Feedback> findAllFeedbacksForItem(Integer itemId);
-    void saveFeedback(String sid, FeedbackData feedbackData);
+    Feedback saveFeedback(String sid, FeedbackData feedbackData);
 
 }

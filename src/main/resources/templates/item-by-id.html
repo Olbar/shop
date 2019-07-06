@@ -20,9 +20,16 @@
         <!--<h2>Item ${item.name}</h2>-->
         <h2 id="item-header" th:item-id="${item.id}" th:text="@{'Item: ' + ${item.name}}"></h2>
 
-        <div id="feedback-box">
-            <div th:each="feedback : ${feedbacks}" class="wc-feedback" th:text="${feedback.text}"></div>
+        <div id="feedback-box" class="wc-feedback-box">
+            <div th:each="feedback : ${feedbacks}" class="wc-feedback">
+                <div>
+                    <img th:src="${feedback.user.avatar}" >
+                    <div class="wc-feedback-author" th:text="${feedback.user.name}"></div>
+                </div>
+                <div th:text="${feedback.text}"></div>
+            </div>
         </div>
+
         <div class="input-feedback">
             <input class="form-control" id="feedback">
             <button class="btn btn-outline-primary" id="send-button">

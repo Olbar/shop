@@ -9,11 +9,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Feedback {
-
-    private Integer id;
-    private String text;
-    private UserAvatar user;
-
+public class Cabinet {
+    private User user;
 }
-

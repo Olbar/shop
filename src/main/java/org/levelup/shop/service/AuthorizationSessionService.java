@@ -10,4 +10,5 @@ public interface AuthorizationSessionService {
 
     boolean isExpired(String sid);
     String findLoginBySessionId(String sid);
+    void removeSession(String sid);
 }

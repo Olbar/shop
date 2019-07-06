@@ -18,8 +18,7 @@ import java.time.LocalDateTime;
 public class FeedbackEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "feedback_id_generator")
-    @SequenceGenerator(name = "feedback_id_generator", sequenceName = "feedbacks_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String text;
 

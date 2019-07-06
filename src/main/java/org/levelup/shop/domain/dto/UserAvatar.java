@@ -5,15 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Feedback {
-
-    private Integer id;
-    private String text;
-    private UserAvatar user;
+public class UserAvatar {
+    private String avatar;
+    private String name;
 
 }
-

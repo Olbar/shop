@@ -70,4 +70,9 @@ public class AuthorizationSessionServiceImpl implements AuthorizationSessionServ
 
     }
 
+    @Override
+    public void removeSession(String sid) {
+        authSessionRepository.deleteById(sid);
+    }
+
 }

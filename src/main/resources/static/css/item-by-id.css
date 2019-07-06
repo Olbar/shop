@@ -1,8 +1,8 @@
 .wc-feedback {
-    height: 35px;
+   /* height: 35px;*/
     border: 1px solid #cecece;
     margin-bottom: 5px;
-    line-height: 35px;
+   /* line-height: 35px;*/
     padding: 0 0 0 10px;
 }
 
@@ -12,4 +12,13 @@
 
 .input-feedback input {
     margin-right: 10px;
+}
+.wc-feedback-box {
+    height: 500px;
+    overflow: auto;
+}
+
+.wc-feedback img {
+    height: 32px;
+    width: 32px;
 }

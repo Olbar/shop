@@ -44,13 +44,18 @@ drop table if exists users;
 
 create table if not exists users(
 id serial primary key,
+username varchar(30) not null,
+address varchar(100),
 login varchar(30) not null unique,
 password varchar(100) not null
 );
 
-insert into users(login, password) values
-('admin','admin'),
-('test', 'test');
+insert into users(login,username, password) values
+('admin','vasya','admin'),
+('test','petya', 'test');
+
+drop type  if exists raiting;
+CREATE TYPE raiting AS ENUM ('excellent', 'good', 'bad','awful','terrible');
 
 drop table if exists feedbacks;
 
@@ -60,13 +65,14 @@ text varchar(256) not null,
 send_date    timestamp not null,
 author_id    integer not null,
 item_id  integer not null,
+mark raiting,
 constraint feedbacks_author_id_fkey foreign key (author_id) references users(id),
 constraint feedbacks_item_id_fkey foreign key (item_id) references items(id)
 );
 
   insert into feedbacks (text, send_date, author_id, item_id)
   values
-('Товар хороший, жаль что не бесплатно', now(), 1, 1),
+('Товар хороший, жаль что небесплатно', now(), 1, 1),
 ('Прекрасный товар', now(), 1, 2),
 ('Всем доволен', now(), 1, 2),
 ('Ужасный товар', now(), 1, 3);
