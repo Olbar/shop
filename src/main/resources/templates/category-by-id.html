@@ -18,8 +18,10 @@
         <!--<h2>Category ${category.name}</h2>-->
         <h2 th:text="@{'Category: ' + ${category.name}}"></h2>
 
-        <div>
-            <div th:each="item : ${items}" class="wc-item" th:text="${item.name}"></div>
+        <div class="wc-item">
+            <div th:each="item : ${items}" class="wc-item-block">
+                <a th:href="@{'/items/' + ${item.id}}" th:text="${item.name}"></a>
+            </div>
         </div>
 
     </div>

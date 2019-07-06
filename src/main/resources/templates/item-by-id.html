@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
+    <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
+    <link href="../static/css/item.css" th:href="@{/css/item.css}" rel="stylesheet" />
+    <link href="../static/css/item-by-id.css" th:href="@{/css/item-by-id.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div class="content">
+
+    <div class="wc-items">
+        <!--<h2>Item ${item.name}</h2>-->
+        <h2 th:text="@{'Item: ' + ${item.name}}"></h2>
+
+        <div>
+            <div th:each="feedback : ${feedbacks}" class="wc-feedback" th:text="${feedback.text}"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

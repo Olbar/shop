@@ -1,13 +1,18 @@
 package org.levelup.shop.domain.entity;
 
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-
+@Setter
+@Getter
 @Entity
+@NoArgsConstructor
 @Table(name = "auth_sessions")
 public class AuthSessionEntity {
 
@@ -23,32 +28,6 @@ public class AuthSessionEntity {
 
     @OneToOne
     private UserEntity user;
-
-
-
-    public String getSid() {
-        return sid;
-    }
-
-    public void setSid(String sid) {
-        this.sid = sid;
-    }
-
-    public LocalDateTime getExpiredDate() {
-        return expiredDate;
-    }
-
-    public void setExpiredDate(LocalDateTime expiredDate) {
-        this.expiredDate = expiredDate;
-    }
-
-    public UserEntity getUser() {
-        return user;
-    }
-
-    public void setUser(UserEntity user) {
-        this.user = user;
-    }
 
 }
 

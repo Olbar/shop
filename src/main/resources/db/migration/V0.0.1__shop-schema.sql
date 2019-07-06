@@ -51,3 +51,22 @@ password varchar(100) not null
 insert into users(login, password) values
 ('admin','admin'),
 ('test', 'test');
+
+drop table if exists feedbacks;
+
+create table if not exists feedbacks(
+id serial primary key,
+text varchar(256) not null,
+send_date    timestamp not null,
+author_id    integer not null,
+item_id  integer not null,
+constraint feedbacks_author_id_fkey foreign key (author_id) references users(id),
+constraint feedbacks_item_id_fkey foreign key (item_id) references items(id)
+);
+
+  insert into feedbacks (text, send_date, author_id, item_id)
+  values
+('Товар хороший, жаль что не бесплатно', now(), 1, 1),
+('Прекрасный товар', now(), 1, 2),
+('Всем доволен', now(), 1, 2),
+('Ужасный товар', now(), 1, 3);
