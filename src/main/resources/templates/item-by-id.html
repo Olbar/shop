@@ -3,10 +3,12 @@
 
 <head>
 
-    <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
-    <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
-    <link href="../static/css/item.css" th:href="@{/css/item.css}" rel="stylesheet" />
-    <link href="../static/css/item-by-id.css" th:href="@{/css/item-by-id.css}" rel="stylesheet" />
+    <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet"/>
+    <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="../static/css/item.css" th:href="@{/css/item.css}" rel="stylesheet"/>
+    <link href="../static/css/item-by-id.css" th:href="@{/css/item-by-id.css}" rel="stylesheet"/>
+    <script th:src="@{/lib/jquery-3.4.1.min.js}" src="../static/lib/jquery-3.4.1.min.js"></script>
+    <script th:src="@{/js/shop/shop.js}" src="../static/js/shop/shop.js"></script>
 
 </head>
 
@@ -16,16 +18,21 @@
 
     <div class="wc-items">
         <!--<h2>Item ${item.name}</h2>-->
-        <h2 th:text="@{'Item: ' + ${item.name}}"></h2>
+        <h2 id="item-header" th:item-id="${item.id}" th:text="@{'Item: ' + ${item.name}}"></h2>
 
-        <div>
+        <div id="feedback-box">
             <div th:each="feedback : ${feedbacks}" class="wc-feedback" th:text="${feedback.text}"></div>
+        </div>
+        <div class="input-feedback">
+            <input class="form-control" id="feedback">
+            <button class="btn btn-outline-primary" id="send-button">
+                Send
+            </button>
+        </div>
 
         </div>
 
     </div>
-
-</div>
 
 </body>
 

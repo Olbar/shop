@@ -1,6 +1,7 @@
 package org.levelup.shop.domain.entity;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,11 +13,13 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name= "feedbacks")
 public class FeedbackEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "feedback_id_generator")
+    @SequenceGenerator(name = "feedback_id_generator", sequenceName = "feedbacks_id_seq")
     private Integer id;
     private String text;
 
@@ -29,7 +32,14 @@ public class FeedbackEntity {
 
 
     @ManyToOne
-    @JoinColumn(name = "item_id",insertable = false, updatable = false)
+    @JoinColumn(name = "item_id",updatable = false)
     private ItemEntity item;
+
+    public FeedbackEntity(String text, LocalDateTime sendDate, UserEntity author, ItemEntity item) {
+        this.text = text;
+        this.sendDate = sendDate;
+        this.author = author;
+        this.item = item;
+    }
 }
 

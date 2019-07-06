@@ -17,4 +17,5 @@ public interface AuthorizationSessionRepository extends CrudRepository<AuthSessi
             nativeQuery = true
     )
     Optional<AuthSessionEntity> findByLogin(@Param("login") String login);
+    Optional<AuthSessionEntity> findBySid(String sid);
 }

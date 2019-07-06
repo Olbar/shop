@@ -9,4 +9,5 @@ public interface AuthorizationSessionService {
     UserSession createOrUpdateSession(String login);
 
     boolean isExpired(String sid);
+    String findLoginBySessionId(String sid);
 }
