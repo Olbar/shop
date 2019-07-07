@@ -1,17 +1,9 @@
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+
 
 .wc-items {
     width: 500px;
 }
 
-.wc-items h2 {
-    text-align: center;
-}
 
 .wc-item-block {
     height: 30px;

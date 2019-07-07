@@ -5,16 +5,13 @@
    /* line-height: 35px;*/
     padding: 0 0 0 10px;
 }
-
-.input-feedback {
-    display: flex;
-}
-
-.input-feedback input {
-    margin-right: 10px;
-}
 .wc-feedback-box {
     height: 500px;
+    width:900px;
+    max-width:100%;
+    min-width:30%;
+    max-height:300px;
+    min-height:100px;
     overflow: auto;
 }
 
@@ -22,3 +19,26 @@
     height: 32px;
     width: 32px;
 }
+
+.wc-feedback-author{
+margin-left:5px;
+}
+
+.wc-feedback-text{
+margin-left:5px;
+}
+
+.input-feedback {
+
+    display:flex;
+    bottom: 0;
+    left: 0;
+}
+
+.input-feedback input {
+    margin-right: 50px;
+
+}
+
+
+

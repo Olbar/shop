@@ -1,16 +1,8 @@
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+
+
 
 .wc-categories {
     width: 500px;
-}
-
-.wc-categories h2 {
-    text-align: center;
 }
 
 .wc-category-block {
@@ -18,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Comic Sans MS, sans-serif;
     border: 1px solid #cecece;
     border-radius: 7px;
     margin: 5px 0 5px 0;

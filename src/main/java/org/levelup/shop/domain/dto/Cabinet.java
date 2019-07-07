@@ -10,5 +10,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cabinet {
-    private User user;
+
+    private Integer userId;
+    private String username;
+    private String address;
+    private String login;
+    private String password;
 }

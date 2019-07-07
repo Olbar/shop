@@ -7,16 +7,26 @@
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
     <link href="../static/css/category.css" th:href="@{/css/category.css}" rel="stylesheet" />
     <link href="../static/css/category-by-id.css" th:href="@{/css/category-by-id.css}" rel="stylesheet" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
 
 </head>
 
 <body>
+<header>
+    <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="" title="Информация о нас">О нас</a></span>
+    <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
+    <span class="contact"><a href="" title="Личный кабинет">Кабинет</a></span>
+    <span class="right"><span class="contact"><a href="" title="Регистрация">Регистрация</a></span>
+    <span class="contact"><a href="/login" title="Вход в систему">Вход</a></span>
+        <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
+</header>
+<center>
+    <div id="menu"><h3 th:text="@{'Категория: ' + ${category.name}}"></h3><hr /></div>
+</center>
 
 <div class="content">
 
     <div class="wc-categories">
-        <!--<h2>Category ${category.name}</h2>-->
-        <h2 th:text="@{'Category: ' + ${category.name}}"></h2>
 
         <div class="wc-item">
             <div th:each="item : ${items}" class="wc-item-block">
@@ -27,7 +37,9 @@
     </div>
 
 </div>
-
+<footer>
+    <span class="rights">Все права защищены &copy; 2019</span>
+</footer>
 </body>
 
 </html>
