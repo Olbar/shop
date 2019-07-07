@@ -1,0 +1,35 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.wc-items {
+    width: 500px;
+}
+
+
+.wc-item-block {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cecece;
+    border-radius: 7px;
+    margin: 5px 0 5px 0;
+}
+
+.wc-item-block:hover {
+    background-color: #65b6c3;
+    border-color: #1c7430;
+}
+
+.wc-item-block a {
+    color: #1b1e21;
+}
+
+.wc-item-block a:hover {
+    color: #1b1e21;
+    text-decoration: none;
+}

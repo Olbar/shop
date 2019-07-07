@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet"/>
+    <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="../static/css/item-by-id.css" th:href="@{/css/item-by-id.css}" rel="stylesheet"/>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script th:src="@{/lib/jquery-3.4.1.min.js}" src="../static/lib/jquery-3.4.1.min.js"></script>
+    <script th:src="@{/js/shop/shop.js}" src="../static/js/shop/shop.js"></script>
+
+</head>
+
+<body>
+<header>
+    <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="" title="Информация о нас">О нас</a></span>
+    <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
+    <span class="contact"><a href="" title="Личный кабинет">Кабинет</a></span>
+    <span class="right"><span class="contact"><a href="" title="Регистрация">Регистрация</a></span>
+    <span class="contact"><a href="/login" title="Вход в систему">Вход</a></span>
+    <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
+</header>
+<center>
+    <div id="menu"><h3 th:text="Отзывы"></h3><hr /></div>
+</center>
+<div class="content">
+
+    <div class="wc-items">
+        <!--<h2>Item ${item.name}</h2>-->
+        <h2 id="item-header" th:item-id="${item.id}"></h2>
+
+        <div id="feedback-box" class="wc-feedback-box">
+            <div th:each="feedback : ${feedbacks}" class="wc-feedback">
+                <img id="image" th:src="${feedback.user.avatar}">
+                    <span class="wc-feedback-author" th:text="@{${feedback.user.name}+':'}"></span>
+                <span class="wc-feedback-text" th:text="${feedback.text}"></span>
+            </div>
+        </div>
+
+        <div class="input-feedback">
+            <input class="form-control" id="feedback">
+            <button class="btn btn-outline-primary" id="send-button">
+                Оставить&nbsp;отзыв
+            </button>
+        </div>
+
+        </div>
+
+    </div>
+
+</body>
+<footer>
+    <span class="rights">Все права защищены &copy; 2019</span>
+</footer>
+</html>
