@@ -7,7 +7,7 @@ import java.util.Collection;
 
 public interface UserService {
 
-    Collection<User> getAll();
+    Collection<User> findAll();
 
     User findById(Integer userId);
 

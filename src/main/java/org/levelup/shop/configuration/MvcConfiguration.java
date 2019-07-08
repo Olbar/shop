@@ -31,7 +31,7 @@ public class MvcConfiguration implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor( cookieSessionInterceptor() )
                 .addPathPatterns( "/*" )
-                .excludePathPatterns( "/login" );
+                .excludePathPatterns( "/login","/registration","/categories");
     }
 
     @Override

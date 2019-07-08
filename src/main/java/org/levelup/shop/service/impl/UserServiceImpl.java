@@ -35,7 +35,7 @@ public class UserServiceImpl extends AbstractService implements UserService {
     }
 
     @Override
-    public Collection<User> getAll() {
+    public Collection<User> findAll() {
         Iterable<UserEntity> iterable = userRepository.findAll();
         return findAllEntities(iterable,User.class);
     }

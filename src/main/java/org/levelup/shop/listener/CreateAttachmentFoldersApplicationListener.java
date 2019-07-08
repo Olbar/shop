@@ -38,7 +38,7 @@ public class CreateAttachmentFoldersApplicationListener implements ApplicationLi
         if (!avatarsFolderExist) {
             createFolder(avatarPath);
         }
-        for (User user : userService.getAll()) {
+        for (User user : userService.findAll()) {
             if (!Files.exists(Paths.get(attachmentsPath + user.getLogin()))) {
                 Files.createDirectory(Paths.get(attachmentsPath + user.getLogin()));
             }

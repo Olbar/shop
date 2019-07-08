@@ -23,7 +23,7 @@ public class CabinetController {
 
     @GetMapping("/cabinet")
     public String cabinetPage(Model model) {
-        model.addAttribute("users", userService.getAll());
+        model.addAttribute("users", userService.findAll());
         return "cabinet";
     }
 
