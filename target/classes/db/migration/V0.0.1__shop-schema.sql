@@ -44,15 +44,15 @@ drop table if exists users;
 
 create table if not exists users(
 id serial primary key,
-username varchar(30) not null,
+first_name varchar(30) not null,
 address varchar(100),
 login varchar(30) not null unique,
 password varchar(100) not null
 );
 
-insert into users(login,username, password) values
-('admin','vasya','admin'),
-('test','petya', 'test');
+insert into users(login,first_name, password) values
+('admin','Ivan','admin'),
+('test','Petr', 'test');
 
 drop type  if exists raiting;
 CREATE TYPE raiting AS ENUM ('excellent', 'good', 'bad','awful','terrible');

@@ -20,5 +20,10 @@ public class UserEntity {
     private Integer id;
     private String login;
     private String password;
+    @Column(name = "first_name")
+    private String firstName;
+
+    @OneToOne(mappedBy = "user", cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
+    private UserDetailsEntity details;
 
 }

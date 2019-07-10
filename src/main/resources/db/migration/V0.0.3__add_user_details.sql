@@ -3,8 +3,8 @@ drop type  if exists sex;
 
 create table if not exists user_details (
   id            integer primary key,
-  first_name    varchar(100) not null,
-  last_name     varchar(100) not null,
+  first_name    varchar(30) not null,
+  last_name     varchar(30) not null,
   avatar_path   text,
   age           integer,
   constraint user_details_id_fkey foreign key (id) references users(id)

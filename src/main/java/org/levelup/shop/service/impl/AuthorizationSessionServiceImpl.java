@@ -67,12 +67,19 @@ public class AuthorizationSessionServiceImpl implements AuthorizationSessionServ
         return authSessionRepository.findBySid( sid )
                 .map( entity -> entity.getUser().getLogin() )
                 .orElseThrow( ShopException::new );
+    }
 
+
+    @Override
+    public Integer findUserIdBySessionId(String sid) {
+        return authSessionRepository.findBySid( sid )
+                .map( entity -> entity.getUser().getId() )
+                .orElseThrow(ShopException::new );
     }
 
     @Override
     public void removeSession(String sid) {
-        authSessionRepository.deleteById(sid);
+        authSessionRepository.deleteById( sid );
     }
 
 }
