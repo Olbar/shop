@@ -34,12 +34,12 @@ margin-bottom:10px;
 }
 
 .content {
-    padding-top:5%;
+    padding-top:4%;
     display: flex;
     justify-content: center;
-
     height:80%;
     font-family: Comic Sans MS, sans-serif;
+
 }
 
 .content .fb{
