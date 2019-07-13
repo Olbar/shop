@@ -1,0 +1,44 @@
+
+#container{
+width:100%;
+float:left;
+height:80%;
+}
+
+   .personnel{
+      float:left;
+      color:#000;
+      min-width:300px;
+      height:300px;
+      font-weight: 700;
+      font-family: Comic Sans MS, sans-serif;
+      margin-left:1%;
+   }
+
+ .personnel h3{
+ margin-left:3%;
+ color:#666;
+ }
+
+  .personnel .image{
+     float:left;
+     min-width:300px;
+     height:300px;
+     border: 2px solid silver;
+     border-radius:5px;
+     box-sizing: border-box;
+     margin-bottom:5px;
+  }
+
+.form-img{
+width:100%;
+border: 2px solid silver;
+background-color:#fff;
+border-radius:5px;
+margin-top:5px;
+
+}
+
+#image-submit{
+margin-top:5px;
+}

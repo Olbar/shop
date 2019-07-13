@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32b6081c-a8d6-4c1c-bc41-7053ccb79be3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/categories/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/categories/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/categories/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/categories/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/categories/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cabinet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/categoryold.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/categoriesold.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/image.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/templates/logout.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/CabinetController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/CabinetController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/ImageController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/ImageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/Cabinet.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/Cabinet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/User.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/UserAvatar.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/UserAvatar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/CabinetController.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/CabinetController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Cabinet.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Cabinet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/User.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/UserAvatar.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/UserAvatar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/category.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/category.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/cabinet.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/cabinet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/categories.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/category.css" afterPath="$PROJECT_DIR$/target/classes/static/css/category.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/login.css" afterPath="$PROJECT_DIR$/target/classes/static/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/cabinet.html" afterPath="$PROJECT_DIR$/target/classes/templates/cabinet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/categories.html" afterPath="$PROJECT_DIR$/target/classes/templates/categories.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/templates/logout.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/logout.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -139,7 +104,7 @@
       <file leaf-file-name="category.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/category.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
+            <state relative-caret-position="430">
               <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
@@ -1376,12 +1341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562796925941</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="правка стилей,добавлена возможность загрузки аватара в личном кабинете, но пока без записи в БД. В категории товаров вставлены картинки-ссылки.">
+      <created>1563058590118</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563058590118</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1405,7 +1376,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28028503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28028503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1512945" sideWeight="0.5056" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32541567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2249191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1437,7 +1408,8 @@
     <MESSAGE value="проведена работа над стилями" />
     <MESSAGE value="начата работа над функциональностью - регистрация, добавление сущности user_details" />
     <MESSAGE value="правка стилей, вывел данные конкретного пользователя в личный кабинет" />
-    <option name="LAST_COMMIT_MESSAGE" value="правка стилей, вывел данные конкретного пользователя в личный кабинет" />
+    <MESSAGE value="правка стилей,добавлена возможность загрузки аватара в личном кабинете, но пока без записи в БД. В категории товаров вставлены картинки-ссылки." />
+    <option name="LAST_COMMIT_MESSAGE" value="правка стилей,добавлена возможность загрузки аватара в личном кабинете, но пока без записи в БД. В категории товаров вставлены картинки-ссылки." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1491,6 +1463,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1844,7 +1817,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/category.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
+        <state relative-caret-position="430">
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
