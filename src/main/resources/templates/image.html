@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<link rel="shortcut icon" href="images/html/apple.ico" type="image/x-icon"/>
+<link rel="icon" href="images/html/apple.ico" type="image/x-icon"/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset=UTF-8/>
+    <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet"/>
+    <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="../static/css/login.css" th:href="@{/css/login.css}" rel="stylesheet"/>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+    <script th:src="@{/lib/jquery-3.4.1.min.js}" src="../static/lib/jquery-3.4.1.min.js" ></script>
+    <script th:src="@{/js/image.js}" src="../static/js/image.js" ></script>
+    <title>Интернет магазин</title>
+</head>
+<body>
+<header>
+    <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="/about" title="Информация о нас">О нас</a></span>
+    <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
+    <span class="contact"><a href="/cabinet" title="Личный кабинет">Кабинет</a></span>
+    <span class="right"><span class="contact"><a href="/registration" title="Регистрация">Регистрация</a></span>
+    <span class="contact"><a href="/login" title="Вход в систему">Вход</a></span><span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
+
+</header>
+
+<div class="content">
+
+    <div th:include="fragments/logout :: login"></div>
+
+    <div class="wc-categories">
+        <h2>Image</h2>
+
+        <img id="image-viewer" width="300" height="300">
+
+
+        <div>
+            <input type="file" class="form-control" id="image-input" accept="image/*" data-max/>
+            <input type="hidden" class="form-control" id="image-input-data" />
+        </div>
+
+        <div>
+            <button class="btn btn-outline-primary" id="image-submit">Submit Base64</button>
+        </div>
+
+        <form method="post" enctype="multipart/form-data" action="/image/file">
+            <input type="file" name="image" />
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+
+    </div>
+
+</div>
+<footer>
+    <span class="rights">Все права защищены &copy; 2019</span>
+</footer>
+</body>
+
+</html>

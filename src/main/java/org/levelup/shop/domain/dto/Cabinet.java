@@ -14,6 +14,8 @@ public class Cabinet {
     private Integer userId;
     private String firstname;
     private String address;
+    private String lastName;
+    private Integer age;
     private String login;
     private String password;
 }

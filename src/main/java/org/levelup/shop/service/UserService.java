@@ -11,5 +11,7 @@ public interface UserService {
 
     User findById(Integer userId);
 
+    User findUserDetailsById(Integer userId);
+
     boolean auth(String login, String password);
 }

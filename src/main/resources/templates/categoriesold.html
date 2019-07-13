@@ -22,11 +22,12 @@
     <div id="menu">Категории товаров<hr /></div>
 
 </center>
-<div id="wrapper">
-    <div class="categories">
-            <div class="box" th:each="category : ${categories}" >
-                    <h8 th:text="${category.name}"></h8>
-                <a  th:href="@{'/categories/' + ${category.id}}"  class="block"><img th:src="@{'images/categories/' + ${category.id} + '.jpg'}" class="block" alt="1" title="1"/></a>
+<div class="content">
+    <div class="wc-categories">
+        <div>
+            <div th:each="category : ${categories}" class="wc-category-block">
+                <a th:href="@{'/categories/' + ${category.id}}" th:text="${category.name}"></a>
+            </div>
         </div>
     </div>
 

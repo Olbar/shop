@@ -12,7 +12,9 @@ import lombok.Setter;
 public class User {
 
     private Integer id;
-    private String username;
+    private String firstName;
+    private String lastName;
+    private Integer age;
     private String address;
     private String login;
 }
