@@ -25,6 +25,7 @@ org\levelup\shop\repository\UserDetailsRepository.class
 org\levelup\shop\domain\entity\UserDetailsEntity.class
 org\levelup\shop\repository\CategoryRepository.class
 org\levelup\shop\domain\dto\User.class
+org\levelup\shop\controller\InformationController.class
 org\levelup\shop\repository\ItemRepository.class
 org\levelup\shop\service\impl\RegistrationServiceImpl.class
 org\levelup\shop\repository\UserRepository.class

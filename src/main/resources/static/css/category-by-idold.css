@@ -1,31 +1,30 @@
 
 
-
-.wc-categories {
+.wc-items {
     width: 500px;
 }
 
-.wc-category-block {
+
+.wc-item-block {
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Comic Sans MS, sans-serif;
     border: 1px solid #cecece;
     border-radius: 7px;
     margin: 5px 0 5px 0;
 }
 
-.wc-category-block:hover {
+.wc-item-block:hover {
     background-color: #65b6c3;
     border-color: #1c7430;
 }
 
-.wc-category-block a {
+.wc-item-block a {
     color: #1b1e21;
 }
 
-.wc-category-block a:hover {
+.wc-item-block a:hover {
     color: #1b1e21;
     text-decoration: none;
 }

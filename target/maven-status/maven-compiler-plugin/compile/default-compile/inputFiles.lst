@@ -20,6 +20,7 @@ D:\levelup\shop\src\main\java\org\levelup\shop\repository\CategoryRepository.jav
 D:\levelup\shop\src\main\java\org\levelup\shop\repository\UserRepository.java
 D:\levelup\shop\src\main\java\org\levelup\shop\controller\ImageController.java
 D:\levelup\shop\src\main\java\org\levelup\shop\controller\LogoutController.java
+D:\levelup\shop\src\main\java\org\levelup\shop\controller\InformationController.java
 D:\levelup\shop\src\main\java\org\levelup\shop\repository\ItemRepository.java
 D:\levelup\shop\src\main\java\org\levelup\shop\service\ItemService.java
 D:\levelup\shop\src\main\java\org\levelup\shop\domain\dto\Category.java

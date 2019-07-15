@@ -1,11 +1,10 @@
 package org.levelup.shop.service.impl;
 
-import org.levelup.shop.domain.dto.Feedback;
-import org.levelup.shop.domain.dto.FeedbackData;
-import org.levelup.shop.domain.dto.UserAvatar;
+import org.levelup.shop.domain.dto.*;
 import org.levelup.shop.domain.entity.FeedbackEntity;
 import org.levelup.shop.domain.entity.ItemEntity;
 import org.levelup.shop.domain.entity.UserEntity;
+import org.levelup.shop.exception.ShopException;
 import org.levelup.shop.repository.FeedbackRepository;
 import org.levelup.shop.repository.ItemRepository;
 import org.levelup.shop.repository.UserRepository;
@@ -18,6 +17,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -27,6 +28,7 @@ public class FeedbackServiceImpl extends AbstractService implements FeedbackServ
     private final UserRepository userRepository;
     private final ItemRepository itemRepository;
     private final FeedbackRepository feedbackRepository;
+
 
     @Autowired
     protected FeedbackServiceImpl(ModelMapper modelMapper, AuthorizationSessionService authSessionService,
@@ -43,9 +45,10 @@ public class FeedbackServiceImpl extends AbstractService implements FeedbackServ
         Iterable<FeedbackEntity> values = feedbackRepository.findByItemId( itemId );
         Collection<Feedback> allEntities = findAllEntities( values, Feedback.class );
         return allEntities.stream()
-                .peek( entity -> entity.setUser( new UserAvatar( "/avatars/default.png", "Natasha" ) ) )
+                .peek( entity -> entity.setUser( new UserAvatar( "/avatars/default.png", values.iterator().next().getAuthor().getFirstName()) ) )
                 .collect( Collectors.toList() );
     }
+
 
     @Override
     @Transactional
@@ -54,6 +57,9 @@ public class FeedbackServiceImpl extends AbstractService implements FeedbackServ
         UserEntity user = userRepository.findByLogin( login );
         ItemEntity item = itemRepository.findById( feedbackData.getItemId() ).get();
         FeedbackEntity result = feedbackRepository.save( new FeedbackEntity( feedbackData.getText(), LocalDateTime.now(), user, item ) );
-        return new Feedback( result.getId(), result.getText(), new UserAvatar("default.png", "Natasha"));
+        return new Feedback( result.getId(), result.getText(), new UserAvatar("default.png", user.getFirstName()));
     }
+
+
+
 }

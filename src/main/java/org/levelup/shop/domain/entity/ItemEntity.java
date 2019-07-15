@@ -1,6 +1,7 @@
 package org.levelup.shop.domain.entity;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,11 +12,12 @@ import javax.persistence.*;
 @Getter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "items")
 public class ItemEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String article_number;
@@ -26,4 +28,13 @@ public class ItemEntity {
     @ManyToOne
     @JoinColumn(name = "category_id",insertable = false, updatable = false)
     private CategoryEntity category;
+
+    public ItemEntity(String name, String article_number, Double price, Integer count, Integer category_id, CategoryEntity category) {
+        this.name = name;
+        this.article_number = article_number;
+        this.price = price;
+        this.count = count;
+        this.category_id = category_id;
+        this.category = category;
+    }
 }

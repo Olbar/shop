@@ -30,16 +30,3 @@ max-width:200px;
 
 }
 
-.category-block:hover {
-    background-color: #65b6c3;
-    border-color: #1c7430;
-}
-
-.category-block a {
-    color: #1b1e21;
-}
-
-.category-block a:hover {
-    color: #1b1e21;
-    text-decoration: none;
-}

@@ -2,7 +2,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <link rel="icon" href="images/html/apple.ico" type="image/x-icon" />
 <head>
-
+    <meta http-equiv="Content-Type" content="text/html" ; charset=UTF-8/>
     <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
     <link href="../static/css/category.css" th:href="@{/css/category.css}" rel="stylesheet" />
@@ -22,14 +22,15 @@
     <div id="menu">Категории товаров<hr /></div>
 
 </center>
+<div class="content">
 <div id="wrapper">
     <div class="categories">
             <div class="box" th:each="category : ${categories}" >
                     <h8 th:text="${category.name}"></h8>
-                <a  th:href="@{'/categories/' + ${category.id}}"  class="block"><img th:src="@{'images/categories/' + ${category.id} + '.jpg'}" class="block" alt="1" title="1"/></a>
+                <a  th:href="@{'/categories/' + ${category.id}}"  class="block"><img th:src="@{'images/categories/' + ${category.id} + '.jpg'}" class="block" th:alt="${category.name}" th:title="${category.name}"/></a>
         </div>
     </div>
-
+</div>
 </div>
 <footer>
     <span class="rights">Все права защищены &copy; 2019</span>
