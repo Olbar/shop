@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BasketRepository extends CrudRepository<BasketEntity, Integer> {
-
+    Iterable<BasketEntity> findByUserId(Integer userId);
 }

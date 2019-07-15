@@ -18,11 +18,12 @@ public class BasketEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private Integer user_id;
     private Integer itemId;
     private String article_number;
     private Double price;
 
-    @OneToOne
-    @JoinColumn(name = "id")
+    @ManyToOne
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
     private UserEntity user;
 }

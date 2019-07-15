@@ -9,4 +9,7 @@ public interface BasketService {
 
     Collection<Basket> findAll();
 
+    Collection<Basket> findAllItemsByUserId(Integer userId);
+
+    Basket findById(Integer basketId);
 }

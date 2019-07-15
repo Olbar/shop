@@ -2,31 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32b6081c-a8d6-4c1c-bc41-7053ccb79be3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/BasketEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/BasketService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V0.0.4__add_basket.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/basket.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/AuthorizationController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/AuthorizationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/ItemController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/ItemController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/interceptor/CookieSessionInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/interceptor/CookieSessionInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/FeedbackRepository.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/FeedbackRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/FeedbackServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/FeedbackServiceImpl.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/ShopApplication.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/ShopApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/configuration/JpaConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/configuration/JpaConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/configuration/MvcConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/configuration/MvcConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/CabinetController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/CabinetController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/CategoryController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/CategoryController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/ImageController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/ImageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/InformationController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/InformationController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/LogoutController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/LogoutController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/RegistrationController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/RegistrationController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/AuthorizationRequest.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/AuthorizationRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/Cabinet.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/Cabinet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/Category.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/Category.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/FeedbackData.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/FeedbackData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/FileAsString.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/FileAsString.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/RegistrationRequest.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/RegistrationRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/User.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/UserAvatar.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/UserAvatar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/UserSession.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/dto/UserSession.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/AuthSessionEntity.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/AuthSessionEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/CategoryEntity.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/CategoryEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/FeedbackEntity.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/FeedbackEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/UserDetailsEntity.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/UserDetailsEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/UserEntity.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/domain/entity/UserEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/listener/CreateAttachmentFoldersApplicationListener.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/listener/CreateAttachmentFoldersApplicationListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/AuthorizationSessionRepository.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/AuthorizationSessionRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/CategoryRepository.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/CategoryRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/ItemRepository.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/ItemRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/repository/UserRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/AuthenticationService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/AuthenticationService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/AuthorizationSessionService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/AuthorizationSessionService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/CabinetService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/CabinetService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/CategoryService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/CategoryService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/ItemService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/ItemService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/RegistrationService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/RegistrationService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/AbstractService.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/AbstractService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/AuthenticationServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/AuthenticationServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/AuthorizationSessionServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/AuthorizationSessionServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/CategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/CategoryServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/ItemServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/ItemServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/RegistrationServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/RegistrationServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/levelup/shop/service/impl/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/FeedbackServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/FeedbackServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database.properties" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/category-by-id.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/category-by-id.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/category-by-id.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/category-by-id.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/item-by-id.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/item-by-id.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/database.properties" afterPath="$PROJECT_DIR$/target/classes/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/category-by-id.css" afterPath="$PROJECT_DIR$/target/classes/static/css/category-by-id.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/category-by-id.html" afterPath="$PROJECT_DIR$/target/classes/templates/category-by-id.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/item-by-id.html" afterPath="$PROJECT_DIR$/target/classes/templates/item-by-id.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/login.html" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/BasketEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/BasketEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/BasketService.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/BasketService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,21 +72,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FeedbackServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/FeedbackServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="47" column="62" lean-forward="false" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BasketServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="485">
+              <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,35 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasketService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/BasketService.java">
+      <file leaf-file-name="basket.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/basket.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasketController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CabinetController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/CabinetController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="51" column="56" lean-forward="false" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+            <state relative-caret-position="491">
+              <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -104,8 +97,8 @@
       <file leaf-file-name="Basket.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state relative-caret-position="228">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,11 +106,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasketEntity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BasketEntity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/BasketEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/ItemRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -126,28 +129,50 @@
       <file leaf-file-name="BasketRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/CategoryEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cabinet.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cabinet.html">
+      <file leaf-file-name="ItemEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/ItemEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="391">
+              <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basket.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/basket.html">
+      <file leaf-file-name="UserDetailsEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/UserDetailsEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+            <state relative-caret-position="119">
+              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeedbackEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/FeedbackEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -215,7 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/RegistrationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.html" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0.0.3__add_user_details.sql" />
@@ -233,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/css/login.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/cabinet.css" />
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/ImageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/CabinetController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Cabinet.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/User.java" />
@@ -256,15 +279,17 @@
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/interceptor/CookieSessionInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/AuthorizationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0.0.4__add_basket" />
-        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/BasketService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0.0.4__add_basket.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/basket.html" />
+        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/BasketService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/BasketEntity.java" />
       </list>
     </option>
@@ -1422,7 +1447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563166774234</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="добавлен объект корзина">
+      <created>1563225416292</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563225416292</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1433,7 +1465,7 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1512945" sideWeight="0.4944" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1512945" sideWeight="0.4944" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1451,7 +1483,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29572445" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8788599" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32541567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35841423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1485,7 +1517,8 @@
     <MESSAGE value="правка стилей, вывел данные конкретного пользователя в личный кабинет" />
     <MESSAGE value="правка стилей,добавлена возможность загрузки аватара в личном кабинете, но пока без записи в БД. В категории товаров вставлены картинки-ссылки." />
     <MESSAGE value="наполнение данными UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="наполнение данными UI" />
+    <MESSAGE value="добавлен объект корзина" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен объект корзина" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1502,54 +1535,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/ItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/FeedbackRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/AuthorizationSessionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/InformationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/AuthorizationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1572,30 +1557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/CabinetRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1624,42 +1585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/AuthorizationSessionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1720,14 +1649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/FeedbackEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/items.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -1744,30 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/CategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/CategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/CategoryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1776,28 +1673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/UserDetailsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/ItemEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1826,14 +1705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/UserDetailsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cabinet.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1842,70 +1713,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/basket.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/CategoryService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        <state relative-caret-position="153">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/CabinetController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="51" column="56" lean-forward="false" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+        <state relative-caret-position="51">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/BasketEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/CabinetRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/UserDetailsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.6.RELEASE/spring-data-commons-2.1.6.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/AuthorizationSessionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/AuthenticationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/FeedbackServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="408">
           <caret line="47" column="62" lean-forward="false" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/CabinetController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="-66">
+          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/CategoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/CategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/AbstractService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/controller/BasketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1914,11 +1863,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/BasketService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/service/impl/BasketServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/basket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/dto/Basket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/UserDetailsEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/FeedbackEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/CategoryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/ItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/repository/BasketRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/ItemEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/levelup/shop/domain/entity/BasketEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

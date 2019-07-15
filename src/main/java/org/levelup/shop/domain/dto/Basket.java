@@ -11,6 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Basket {
     private Integer id;
+    private Integer userId;
     private Integer itemId;
     private String article_number;
     private Double price;
