@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<link rel="shortcut icon" href="images/html/apple.ico" type="image/x-icon"/>
-<link rel="icon" href="images/html/apple.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="=/images/html/apple.ico" type="image/x-icon"/>
+<link rel="icon" href="/images/html/apple.ico" type="image/x-icon"/>
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset=UTF-8/>
     <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
@@ -28,8 +28,8 @@
         <div class="box" th:each="item : ${items}" >
             <h8 th:text="${item.name}"></h8>
             <a  th:href="@{'/items/' + ${item.id}}"  class="block"><img  th:src="@{'/images/items/' + ${item.id} + '.jpg'}" class="block" th:alt="${item.name}" th:title="${item.name}"/></a>
-            <div th:text="@{'Цена: ' + ${item.price}+' руб.'}"></div>
-            <a th:href="@{'/items/' + ${item.id}}">Отзывы о товаре</a>
+            <div class="price-block" th:text="@{'Цена: ' + ${item.price}+' руб.'}"></div>
+            <a class="price-block" th:href="@{'/items/' + ${item.id}}">Отзывы о товаре</a>
         </div>
     </div>
 </div>

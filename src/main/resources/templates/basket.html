@@ -1,39 +1,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<link rel="shortcut icon" href="=/images/html/apple.ico" type="image/x-icon"/>
-<link rel="icon" href="/images/html/apple.ico" type="image/x-icon"/>
+<link rel="icon" href="/images/html/apple.ico" type="image/x-icon" />
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset=UTF-8/>
     <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
-    <link href="../static/css/category-by-id.css" th:href="@{/css/category-by-id.css}" rel="stylesheet" />
+    <link href="../static/css/category.css" th:href="@{/css/category.css}" rel="stylesheet" />
     <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
-
 </head>
 <body>
 <header>
     <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="/about" title="Информация о нас">О нас</a></span>
-    <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
+    <span class="contact"><a href="" title="Категории товаров">Категории</a></span>
     <span class="contact"><a href="/cabinet" title="Личный кабинет">Кабинет</a></span>
     <span class ="right"><span class="contact"><a href="/registration" title="Регистрация">Регистрация</a></span>
     <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
 </header>
+
 <center>
-<div id="menu"><div th:text="@{'Категория: ' + ${category.name}}"></div><hr /></div>
+    <div id="menu">Корзина<hr /></div>
+
 </center>
 
-<div class="content">
-<div id="wrapper">
-    <div class="items">
-        <div class="box" th:each="item : ${items}" >
-            <h8 th:text="${item.name}"></h8>
-            <a  th:href="@{'/items/' + ${item.id}}"  class="block"><img  th:src="@{'/images/items/' + ${item.id} + '.jpg'}" class="block" th:alt="${item.name}" th:title="${item.name}"/></a>
-            <div class="price-block" th:text="@{'Цена: ' + ${item.price}+' руб.'}"></div>
-            <a class="price-block" th:href="@{'/items/' + ${item.id}}">Отзывы о товаре</a>
-        </div>
-    </div>
-</div>
-</div>
+<table border=2>
+    <thead>
+    <tr>
+        <th>&nbsp;Номер&nbsp;</th>
+        <th>&nbsp;Цена&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr align="center" th:each="basket : ${basket}">
+        <td th:text="${basket.itemId}"></td>
+        <td th:text="${basket.price}"></td>
+    </tr>
+    </tbody>
+</table>
 <footer>
     <span class="rights">Все права защищены &copy; 2019</span>
 </footer>

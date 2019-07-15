@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -44,8 +45,9 @@ public class FeedbackServiceImpl extends AbstractService implements FeedbackServ
     public Collection<Feedback> findAllFeedbacksForItem(Integer itemId) {
         Iterable<FeedbackEntity> values = feedbackRepository.findByItemId( itemId );
         Collection<Feedback> allEntities = findAllEntities( values, Feedback.class );
+        Iterator<FeedbackEntity> iterator = values.iterator();
         return allEntities.stream()
-                .peek( entity -> entity.setUser( new UserAvatar( "/avatars/default.png", values.iterator().next().getAuthor().getFirstName()) ) )
+                .peek( entity -> entity.setUser( new UserAvatar( "/avatars/default.png", iterator.next().getAuthor().getFirstName()) ) )
                 .collect( Collectors.toList() );
     }
 
