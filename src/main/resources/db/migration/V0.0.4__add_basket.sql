@@ -1,5 +1,5 @@
 create table if not exists basket (
-  id             integer primary key,
+  id             serial primary key,
   user_id        integer not null,
   item_id        integer not null,
   article_number varchar(64) not null,
@@ -8,7 +8,7 @@ create table if not exists basket (
   constraint basket_item_id_fkey foreign key (item_id) references items(id)
 );
 
-insert into basket
+insert into basket(user_id,item_id,article_number,price)
 values
-        (1, 2, 1,'0000001','2500'),
-        (2, 1, 2,'0000002','4500');
+        (2, 1,'0000001','2500'),
+        (1, 2,'0000002','4500');

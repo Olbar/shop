@@ -26,7 +26,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     @Transactional
     public void register(RegistrationRequest request) {
         UserEntity user = new UserEntity();
-        user.setFirstName(request.getPassword());
+        user.setFirstName(request.getFirstName());
         user.setLogin(request.getLogin());
         user.setPassword(request.getPassword());
 

@@ -8,6 +8,8 @@
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
     <link href="../static/css/category-by-id.css" th:href="@{/css/category-by-id.css}" rel="stylesheet" />
     <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script th:src="@{/lib/jquery-3.4.1.min.js}" src="../static/lib/jquery-3.4.1.min.js"></script>
+    <script th:src="@{/js/shop/add_to_basket.js}" src="../static/js/shop/add_to_basket.js"></script>
 
 </head>
 <body>
@@ -26,10 +28,13 @@
 <div id="wrapper">
     <div class="items">
         <div class="box" th:each="item : ${items}" >
-            <h8 th:text="${item.name}"></h8>
+            <h8 id ="item" th:text="${item.name}" th:item-id="${item.id}"></h8>
             <a  th:href="@{'/items/' + ${item.id}}"  class="block"><img  th:src="@{'/images/items/' + ${item.id} + '.jpg'}" class="block" th:alt="${item.name}" th:title="${item.name}"/></a>
             <div class="price-block" th:text="@{'Цена: ' + ${item.price}+' руб.'}"></div>
             <a class="price-block" th:href="@{'/items/' + ${item.id}}">Отзывы о товаре</a>
+            <form class="price-block">
+            <button type="submit" id="add_basket" >Добавить в корзину</button>
+            </form>
         </div>
     </div>
 </div>

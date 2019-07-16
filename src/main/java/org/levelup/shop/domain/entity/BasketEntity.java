@@ -1,6 +1,5 @@
 package org.levelup.shop.domain.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +10,6 @@ import javax.persistence.*;
 @Getter
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "basket")
 public class BasketEntity {
 
@@ -23,7 +21,7 @@ public class BasketEntity {
     private String article_number;
     private Double price;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    @OneToOne
+    @JoinColumn(name = "user_id", updatable = false,insertable = false)
     private UserEntity user;
 }

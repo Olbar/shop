@@ -3,6 +3,7 @@ package org.levelup.shop.service;
 
 
 import org.levelup.shop.domain.dto.Item;
+import org.levelup.shop.domain.dto.ItemData;
 
 import java.util.Collection;
 

@@ -2,6 +2,8 @@ package org.levelup.shop.controller;
 
 
 import org.levelup.shop.domain.dto.FeedbackData;
+import org.levelup.shop.domain.dto.ItemData;
+import org.levelup.shop.service.AdditionService;
 import org.levelup.shop.service.FeedbackService;
 import org.levelup.shop.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +17,13 @@ public class ItemController {
 
     private final ItemService itemService;
     private final FeedbackService feedbackService;
+    private final AdditionService additionService;
 
     @Autowired
-    public ItemController(FeedbackService feedbackService,ItemService itemService) {
+    public ItemController(FeedbackService feedbackService, ItemService itemService, AdditionService additionService) {
         this.feedbackService = feedbackService;
         this.itemService = itemService;
+        this.additionService = additionService;
     }
 
     @GetMapping
@@ -38,9 +42,17 @@ public class ItemController {
 
     @PostMapping("/{itemId}/feedback")
     public void saveFeedback(@PathVariable final Integer itemId,
-                            @RequestBody FeedbackData feedbackData,
-                            @CookieValue("WC_SESSION") final String sid) {
+                             @RequestBody FeedbackData feedbackData,
+                             @CookieValue("WC_SESSION") final String sid) {
         feedbackService.saveFeedback( sid, feedbackData );
 
+    }
+
+    @ResponseBody
+    @PostMapping("/{itemId}/basket")
+    public void addItem(@PathVariable final Integer itemId,
+                        @RequestBody ItemData itemData,
+                        @CookieValue("WC_SESSION") final String sid) {
+        additionService.addItem( sid, itemData.getItemId() );
     }
 }
