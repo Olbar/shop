@@ -42,7 +42,7 @@ public class AdditionServiceImpl extends AbstractService implements AdditionServ
         ItemEntity entity = itemRepository.findById( itemData.getItemId() ).get();
         User uentity= userService.findById( userId );
 
-        BasketEntity result= basketRepository.save( new BasketEntity( entity.getId(),uentity.getId(),entity.getArticle_number(),entity.getPrice()));
+        BasketEntity result= basketRepository.save( new BasketEntity( uentity.getId(),entity.getId(),entity.getArticle_number(),entity.getPrice()));
       return new Basket(result.getId(),result.getUser_id(),result.getItemId(),result.getArticle_number(),result.getPrice());
     }
 

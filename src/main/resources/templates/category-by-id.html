@@ -21,20 +21,22 @@
     <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
 </header>
 <center>
-<div id="menu"><div th:text="@{'Категория: ' + ${category.name}}"></div><hr /></div>
+<div id="menu" class="top"> <a  href="/basket" ><img class="top" id="basket" src="/images/html/basket.png" alt="Корзина" th:title="Корзина"/></a><div th:text="@{'Категория: ' + ${category.name}}"></div><hr />
+
+</div>
 </center>
 
 <div class="content">
 <div id="wrapper">
     <div class="items">
-        <div class="box" th:each="item : ${items}" >
-            <h8 id ="item" th:text="${item.name}" th:item-id="${item.id}"></h8>
+        <div class="box"  th:each="item : ${items}" >
+            <h8 class="item" th:text="${item.name}"></h8>
             <a  th:href="@{'/items/' + ${item.id}}"  class="block"><img  th:src="@{'/images/items/' + ${item.id} + '.jpg'}" class="block" th:alt="${item.name}" th:title="${item.name}"/></a>
             <div class="price-block" th:text="@{'Цена: ' + ${item.price}+' руб.'}"></div>
             <a class="price-block" th:href="@{'/items/' + ${item.id}}">Отзывы о товаре</a>
-            <form class="price-block">
-            <button type="submit" id="add_basket" >Добавить в корзину</button>
-            </form>
+            <div class="price-block">
+                <button type="submit" class="add_basket" th:item-id="${item.id}">Добавить в корзину</button>
+            </div>
         </div>
     </div>
 </div>

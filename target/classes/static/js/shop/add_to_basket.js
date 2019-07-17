@@ -4,14 +4,14 @@
 $(document).ready(() => {
 
     // $('#send-button').on('click', function() {});
-    $('#add_basket').on('click', sendActionToServer);
+    $('.add_basket').on('click', sendActionToServer);
 
 });
 
-function sendActionToServer() {
+function sendActionToServer(event) {
     // item id
   const itemData = {
-        itemId: $('#item').attr('item-id') // get attribute value
+        itemId: $(event.target).attr('item-id')// get attribute value
     };
 
     $.ajax({
@@ -23,5 +23,4 @@ function sendActionToServer() {
     })
             .done(() => {console.log('success')})
             .fail(() => { console.log('fail'); });
-    });
 }

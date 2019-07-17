@@ -50,7 +50,8 @@ public class ItemController {
 
     @ResponseBody
     @PostMapping("/{itemId}/basket")
-    public void addItem(@PathVariable("itemId") final ItemData itemData,
+    public void addItem(@PathVariable final Integer itemId,
+                        @RequestBody ItemData itemData,
                         @CookieValue("WC_SESSION") final String sid) {
         additionService.addItem( sid, itemData );
     }
