@@ -1,6 +1,9 @@
 package org.levelup.shop.service;
 
+import org.levelup.shop.domain.dto.Basket;
+import org.levelup.shop.domain.dto.ItemData;
+
 public interface AdditionService {
 
-    void addItem(String sid, Integer itemId);
+    Basket addItem(String sid, ItemData itemData);
 }
