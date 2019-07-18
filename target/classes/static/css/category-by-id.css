@@ -8,10 +8,14 @@ font-family: Comic Sans MS, sans-serif;
 .items {
 float:left;
 width: 90%;
-margin-left:5%;
+margin-left:8%;
 }
 .box{
 width:18%;
+min-height:10%px;
+min-width:10%px;
+max-height:18%px;
+max-width:18%px;
 float:left;
 margin-right:2%;
 margin-top:5%;
@@ -31,14 +35,25 @@ width:100%;
 box-sizing:border-box;
 border: 1px solid silver;
 border-radius: 5px;
-min-height:200px;
-min-width:200px;
-max-height:200px;
-max-width:200px;
+height:200px;
+width:200px;
 
 }
 
 .price-block{
 width:100%;
 float:left;
+}
+
+#basket{
+float:right;
+box-sizing:border-box;
+border: 1px solid silver;
+border-radius: 5px;
+margin-top:10px;
+margin-right:20px;
+min-height:40px;
+min-width:40px;
+max-height:40px;
+max-width:40px;
 }
