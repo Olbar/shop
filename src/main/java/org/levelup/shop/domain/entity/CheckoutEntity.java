@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.lang.reflect.Array;
 
 @Getter
 @Setter
@@ -15,13 +14,16 @@ import java.lang.reflect.Array;
 public class CheckoutEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "payment_method")
     private String paymentMethod;
     @Column(name = "delivery_method")
     private String deliveryMethod;
     private Integer user_id;
-    private Array itemId;
+
+    @Column(name = "item_ids")
+    private String itemIds;
     private String phone;
     private String address;
 

@@ -36,7 +36,7 @@ public class BasketServiceImpl extends AbstractService implements BasketService 
     }
 
     @Override
-    public Collection<Basket> findAllItemsByUserId(Integer userId) {
+    public Collection<Basket> findAllBasketsByUserId(Integer userId) {
         Iterable<BasketEntity> values= basketRepository.findByUserId( userId );
         return findAllEntities( values, Basket.class );
     }

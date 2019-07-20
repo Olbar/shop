@@ -21,6 +21,6 @@ function sendActionToServer(event) {
         data: JSON.stringify(itemData)
 
     })
-            .done(() => {console.log('success')})
+            .done(() => {console.log('success');location.reload();})
             .fail(() => { console.log('fail'); });
 }

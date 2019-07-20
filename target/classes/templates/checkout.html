@@ -5,17 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html" ; charset=UTF-8/>
     <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet"/>
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet"/>
-    <link href="../static/css/login.css" th:href="@{/css/login.css}" rel="stylesheet"/>
+    <link href="../static/css/checkout.css" th:href="@{/css/checkout.css}" rel="stylesheet"/>
     <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
 
 <body>
 <header>
-    <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="" title="Информация о нас">О нас</a></span>
-    <span class="contact"><a href="" title="Категории товаров">Категории</a></span>
-    <span class="contact"><a href="" title="Личный кабинет">Кабинет</a></span>
-    <span class="right"><span class="contact"><a href="" title="Регистрация">Регистрация</a></span>
-    <span class="contact"><a href="/login" title="Вход в систему">Вход</a></span>
+    <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="/about" title="Информация о нас">О нас</a></span>
+    <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
+    <span class="contact"><a href="/cabinet" title="Личный кабинет">Кабинет</a></span>
+    <span class="right">
     <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
 </header>
 <div class="content">
@@ -28,22 +27,30 @@
 
         <div class="form-group">
             <label for="address">Адрес</label>
-            <input id="address" name="login" class="form-control" th:value="${request.address}" />
+            <input id="address" name="address" class="form-control"  required aria-required="true"/>
         </div>
 
         <div class="form-group">
             <label for="phone">Телефон</label>
-            <input id="phone" name="phone" class="form-control" th:value="${request.phone}" />
+            <input id="phone" name="phone" class="form-control" required aria-required="true"/>
         </div>
 
         <div class="form-group">
-            <label for="delivery">Тип доставки</label>
-            <input id="delivery" name="delivery" class="form-control" th:value="${request.deliveryMethod}"/>
+            <label for="deliveryMethod">Тип доставки</label>
+            <select id="deliveryMethod" name="deliveryMethod" class="form-control" required aria-required="true">
+            <option></option>
+            <option>Самовывоз</option>
+            <option>Доставка</option>
+            </select>
         </div>
 
         <div class="form-group">
-            <label for="payment">Тип оплаты</label>
-            <input id="payment" name="payment" class="form-control" th:value="${request.deliveryMethod}" />
+            <label for="paymentMethod">Тип оплаты</label>
+            <select id="paymentMethod" name="paymentMethod" class="form-control" required aria-required="true">
+                <option></option>
+                <option>Наличные</option>
+                <option>Банковская карта</option>
+            </select>
         </div>
 
         <button type="submit" class="button">Оформить заказ</button>

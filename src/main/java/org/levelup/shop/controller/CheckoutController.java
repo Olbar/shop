@@ -6,10 +6,7 @@ import org.levelup.shop.service.CheckoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/checkout")
@@ -30,8 +27,9 @@ public class CheckoutController {
     }
 
     @PostMapping
-    public String checkOut(@ModelAttribute("request") final CheckoutRequest request) {
-        сheckoutService.checkout(request);
+    public String checkOutRequest(@ModelAttribute("request") final CheckoutRequest request,
+                                  @CookieValue("WC_SESSION") final String sid) {
+        сheckoutService.checkout(sid, request);
         return "redirect:/categories";
     }
 }

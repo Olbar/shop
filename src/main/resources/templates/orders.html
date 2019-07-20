@@ -1,14 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<link rel="icon" href="/images/html/apple.ico" type="image/x-icon" />
+<link rel="icon" href="images/html/apple.ico" type="image/x-icon" />
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset=UTF-8/>
     <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
-    <link href="../static/css/basket.css" th:href="@{/css/basket.css}" rel="stylesheet" />
+    <link href="../static/css/category.css" th:href="@{/css/category.css}" rel="stylesheet" />
     <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
-    <script th:src="@{/lib/jquery-3.4.1.min.js}" src="../static/lib/jquery-3.4.1.min.js"></script>
-    <script th:src="@{/js/shop/delete_basket.js}" src="../static/js/shop/delete_basket.js"></script>
+
 </head>
 <body>
 <header>
@@ -20,22 +19,16 @@
 </header>
 
 <center>
-    <div id="menu" class="top"> <a  href="/checkout" ><img class="top" id="checkout" src="/images/html/delivery.png" alt="Оформить заказ" title="Оформить заказ"/></a>Корзина<hr />
-    </div>
+    <div id="menu">Мои заказы<hr /></div>
 </center>
 
 <div class="content">
     <div id="wrapper">
-        <div class="items">
-            <div class="box"  th:each="basket : ${baskets}" >
-                <h8 class="item" th:text="${basket.article_number}"></h8>
-                <img  th:src="@{'/images/items/' + ${basket.itemId} + '.jpg'}" class="block" th:alt="${basket.itemId}" th:title="${basket.itemId}"/>
-                <div class="price-block" th:text="@{'Цена: ' + ${basket.price}+' руб.'}"></div>
-                <div class="price-block">
-                    <button type="submit" class="delete_basket" th:item-id="${basket.id}">Удалить из корзины</button>
-                </div>
+        <div class="categories">
+            <div class="box" th:each="category : ${categories}" >
+                <h8 th:text="${category.name}"></h8>
+                <a  th:href="@{'/categories/' + ${category.id}}"  class="block"><img th:src="@{'images/categories/' + ${category.id} + '.jpg'}" class="block" th:alt="${category.name}" th:title="${category.name}"/></a>
             </div>
-
         </div>
     </div>
 </div>

@@ -5,37 +5,40 @@
     <meta http-equiv="Content-Type" content="text/html" ; charset=UTF-8/>
     <link href="../static/lib/bootstrap-reboot.min.css" th:href="@{/lib/bootstrap-reboot.min.css}" rel="stylesheet" />
     <link href="../static/lib/bootstrap.min.css" th:href="@{/lib/bootstrap.min.css}" rel="stylesheet" />
-    <link href="../static/css/category.css" th:href="@{/css/category.css}" rel="stylesheet" />
+    <link href="../static/css/basket.css" th:href="@{/css/basket.css}" rel="stylesheet" />
     <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script th:src="@{/lib/jquery-3.4.1.min.js}" src="../static/lib/jquery-3.4.1.min.js"></script>
+    <script th:src="@{/js/shop/delete_basket.js}" src="../static/js/shop/delete_basket.js"></script>
 </head>
 <body>
 <header>
     <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="/about" title="Информация о нас">О нас</a></span>
-    <span class="contact"><a href="" title="Категории товаров">Категории</a></span>
+    <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
     <span class="contact"><a href="/cabinet" title="Личный кабинет">Кабинет</a></span>
     <span class ="right"><span class="contact"><a href="/registration" title="Регистрация">Регистрация</a></span>
     <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
 </header>
 
 <center>
-    <div id="menu">Корзина<hr /></div>
-
+    <div id="menu" class="top"> <a  href="/checkout" ><img class="top" id="checkout" src="/images/html/delivery.png" alt="Оформить заказ" title="Оформить заказ"/></a>Корзина<hr />
+    </div>
 </center>
 
-<table border=2>
-    <thead>
-    <tr>
-        <th>&nbsp;Номер&nbsp;</th>
-        <th>&nbsp;Цена&nbsp;</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr align="center" th:each="basket : ${basket}">
-        <td th:text="${basket.itemId}"></td>
-        <td th:text="${basket.price}"></td>
-    </tr>
-    </tbody>
-</table>
+<div class="content">
+    <div id="wrapper">
+        <div class="items">
+            <div class="box"  th:each="basket : ${baskets}" >
+                <h8 class="item" th:text="${basket.article_number}"></h8>
+                <img  th:src="@{'/images/items/' + ${basket.itemId} + '.jpg'}" class="block" th:alt="${basket.itemId}" th:title="${basket.itemId}"/>
+                <div class="price-block" th:text="@{'Цена: ' + ${basket.price}+' руб.'}"></div>
+                <div class="price-block">
+                    <button type="submit" class="delete_basket" th:item-id="${basket.id}">Удалить из корзины</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 <footer>
     <span class="rights">Все права защищены &copy; 2019</span>
 </footer>

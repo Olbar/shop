@@ -38,7 +38,9 @@ function sendFeedbackToServer(text) {
 
     }).done((resp) => {
         renderFeedback(resp.text);
+        location.reload();
     }).fail((resp) => {
         console.log('fail');
+        location.reload();
     });
 }
