@@ -32,15 +32,15 @@ public class CreateAttachmentFoldersApplicationListener implements ApplicationLi
         boolean attachmentsFolderExist = Files.exists( Paths.get(attachmentsPath));
         boolean avatarsFolderExist = Files.exists(Paths.get(avatarPath));
 
-        if (!attachmentsFolderExist) {
-            createFolder(attachmentsPath);
-        }
+      //  if (!attachmentsFolderExist) {
+     //       createFolder(attachmentsPath);
+      //  }
         if (!avatarsFolderExist) {
             createFolder(avatarPath);
         }
         for (User user : userService.findAll()) {
-            if (!Files.exists(Paths.get(attachmentsPath + user.getLogin()))) {
-                Files.createDirectory(Paths.get(attachmentsPath + user.getLogin()));
+            if (!Files.exists(Paths.get(avatarPath + user.getLogin()))) {
+                Files.createDirectory(Paths.get(avatarPath + user.getLogin()));
             }
         }
     }

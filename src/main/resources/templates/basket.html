@@ -20,7 +20,8 @@
 </header>
 
 <center>
-    <div id="menu" class="top"> <a  href="/checkout" ><img class="top" id="checkout" src="/images/html/delivery.png" alt="Оформить заказ" title="Оформить заказ"/></a>Корзина<hr />
+    <div id="menu" class="top"><a  href="/checkout" ><img class="top" id="checkout" src="/images/html/delivery.png" alt="Оформить заказ" title="Оформить заказ"/></a>Корзина<hr />
+        <h5 class="top" th:text="@{'Сумма к оплате:  '+${total}+' руб   '}"></h5>
     </div>
 </center>
 

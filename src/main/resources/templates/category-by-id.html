@@ -22,7 +22,7 @@
 </header>
 <center>
 <div id="menu" class="top"> <a  href="/basket" ><img class="top" id="basket" src="/images/html/basket.png" alt="Корзина" th:title="Корзина"/></a><div th:text="@{'Категория: ' + ${category.name}}"></div><hr />
-
+    <h5 class="top" th:text="@{'Сумма к оплате:  '+${total}+' руб   '}"></h5>
 </div>
 </center>
 

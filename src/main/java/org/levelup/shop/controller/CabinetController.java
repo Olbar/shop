@@ -3,7 +3,9 @@ package org.levelup.shop.controller;
 
 
 
+
 import org.levelup.shop.domain.dto.FileAsString;
+
 import org.levelup.shop.service.AuthorizationSessionService;
 import org.levelup.shop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +18,14 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import java.util.Base64;
 
 @Controller
 @RequestMapping("/cabinet")
 public class CabinetController {
-    @Value("${shop.attachments}")
-
-    private String attachmentDirectoryPath;
+    @Value("${shop.attachments.avatars}")
+    private String avatarsDirectoryPath;
 
     private final AuthorizationSessionService authSessionService;
     private final UserService userService;
@@ -37,15 +39,20 @@ public class CabinetController {
 
     @ResponseBody
     @PostMapping("/string")
-    public void loadImageAsString(@RequestBody FileAsString fileAsString) throws IOException {
+    public void loadImageAsString(@RequestBody FileAsString fileAsString,
+                                  @CookieValue("WC_SESSION") final String sid) throws IOException {
         byte[] bytes = Base64.getDecoder().decode(fileAsString.getFile());
-        File file = new File(attachmentDirectoryPath + fileAsString.getFilename());
+        String userLogin=authSessionService.findLoginBySessionId( sid );
+        System.out.println("dsjhfkjdsf:"+ avatarsDirectoryPath + userLogin+"/"+fileAsString.getFilename());
+        File file = new File(avatarsDirectoryPath + userLogin+"/"+fileAsString.getFilename());
 
         try (BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(file))) {
             outputStream.write(bytes);
             outputStream.flush();
         }
     }
+
+
 
     @GetMapping
     public  String displayCabinet(@CookieValue("WC_SESSION") final String sid, Model model){

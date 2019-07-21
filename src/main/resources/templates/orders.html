@@ -14,24 +14,38 @@
     <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="/about" title="Информация о нас">О нас</a></span>
     <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
     <span class="contact"><a href="/cabinet" title="Личный кабинет">Кабинет</a></span>
-    <span class ="right"><span class="contact"><a href="/registration" title="Регистрация">Регистрация</a></span>
-    <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
+    <span class ="right"><span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
 </header>
 
 <center>
-    <div id="menu">Мои заказы<hr /></div>
-</center>
+    <div id="menu">Мои заказы<hr />
 
-<div class="content">
-    <div id="wrapper">
-        <div class="categories">
-            <div class="box" th:each="category : ${categories}" >
-                <h8 th:text="${category.name}"></h8>
-                <a  th:href="@{'/categories/' + ${category.id}}"  class="block"><img th:src="@{'images/categories/' + ${category.id} + '.jpg'}" class="block" th:alt="${category.name}" th:title="${category.name}"/></a>
-            </div>
-        </div>
+<table border=2>
+    <thead>
+    <tr>
+        <th>&nbsp;Номер заказа&nbsp;</th>
+        <th>&nbsp;Номера товаров&nbsp;</th>
+        <th>&nbsp;Тип оплаты&nbsp;</th>
+        <th>&nbsp;Тип доставки&nbsp;</th>
+        <th>&nbsp;Сумма заказа&nbsp;</th>
+        <th>&nbsp;Статус заказа&nbsp;</th>
+        <th>&nbsp;Дата заказа&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr align="center" th:each="order : ${orders}">
+        <td th:text="${order.id}"></td>
+        <td th:text="${order.itemIds}"></td>
+        <td th:text="${order.paymentMethod}"></td>
+        <td th:text="${order.deliveryMethod}"></td>
+        <td th:text="${order.totalPrice}"></td>
+        <td >В работе</td>
+        <td th:text="${order.dateTime}"></td>
+    </tr>
+    </tbody>
+</table>
     </div>
-</div>
+</center>
 <footer>
     <span class="rights">Все права защищены &copy; 2019</span>
 </footer>

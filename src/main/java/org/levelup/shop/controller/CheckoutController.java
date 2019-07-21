@@ -30,6 +30,6 @@ public class CheckoutController {
     public String checkOutRequest(@ModelAttribute("request") final CheckoutRequest request,
                                   @CookieValue("WC_SESSION") final String sid) {
         сheckoutService.checkout(sid, request);
-        return "redirect:/categories";
+        return "redirect:/orders";
     }
 }
