@@ -23,13 +23,19 @@ $(document).ready(() => {
 
         fileAsString = fileAsString.replace(specialInfo, '');
 
+
+  const userData = {
+        userId: $('.user').attr('item-id')// get attribute value
+    };
+
+
         $.ajax({
-            url: '/image/string',
-            type: 'POST',
+            url: '/user_details/'+userData.userId,
+            type: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify({ filename: filename, file: fileAsString })
         })
-            .done(() => {console.log('success')})
+            .done(() => {console.log('success');location.reload();})
             .fail(() => { console.log('fail'); });
     });
 

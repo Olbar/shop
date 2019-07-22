@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserDetailsRepository extends CrudRepository<UserDetailsEntity, Integer> {
+    UserDetailsEntity findByUserId(Integer userId);
 }

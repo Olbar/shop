@@ -39,6 +39,7 @@
     </div>
     <div class ="personnel">
         <div><h3>Личные&nbspданные</h3><hr/></div>
+        <div class="user" hidden="true" th:item-id="${user.id}"></div>
         <div th:text="@{'Логин: ' + ${user.login}}"></div>
         <div th:text="@{'Имя: ' + ${user.firstName}}"></div>
         <div th:text="@{'Фамилия: ' + ${user_details.lastName}}"></div>
