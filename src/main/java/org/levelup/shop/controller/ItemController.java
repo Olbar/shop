@@ -3,9 +3,7 @@ package org.levelup.shop.controller;
 
 import org.levelup.shop.domain.dto.FeedbackData;
 import org.levelup.shop.domain.dto.ItemData;
-import org.levelup.shop.service.AdditionService;
-import org.levelup.shop.service.FeedbackService;
-import org.levelup.shop.service.ItemService;
+import org.levelup.shop.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,12 +16,16 @@ public class ItemController {
     private final ItemService itemService;
     private final FeedbackService feedbackService;
     private final AdditionService additionService;
+    private final UserDetailsService userDetailsService;
+    private final AuthorizationSessionService authSessionService;
 
     @Autowired
-    public ItemController(FeedbackService feedbackService, ItemService itemService, AdditionService additionService) {
+    public ItemController(FeedbackService feedbackService, ItemService itemService, AdditionService additionService, UserDetailsService userDetailsService, AuthorizationSessionService authSessionService) {
         this.feedbackService = feedbackService;
         this.itemService = itemService;
         this.additionService = additionService;
+        this.userDetailsService = userDetailsService;
+        this.authSessionService = authSessionService;
     }
 
     @GetMapping
@@ -33,9 +35,12 @@ public class ItemController {
     }
 
     @GetMapping("/{itemId}")//path parameter
-    public  String displayFeedback(@PathVariable("itemId") final Integer itemId, Model model){
+    public  String displayFeedback(@CookieValue("WC_SESSION") final String sid,
+            @PathVariable("itemId") final Integer itemId, Model model){
+        Integer userId = authSessionService.findUserIdBySessionId(sid);
         model.addAttribute( "item", itemService.findById(itemId));
         model.addAttribute( "feedbacks",feedbackService.findAllFeedbacksForItem(itemId));
+        model.addAttribute( "user_details",userDetailsService.findUserDetailsById(userId));
         return "item-by-id";
     }
 

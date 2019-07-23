@@ -44,7 +44,7 @@ public class UserDetailsServiceImpl extends AbstractService implements UserDetai
         UserDetailsEntity user = userDetailsRepository.findByUserId(userId);
         user.setFirstName(oldUser.getFirstName());
         user.setLastName( oldUser.getLastName() );
-        String avatarPath=avatarsDirectoryPath + userLogin+"/"+fileAsString.getFilename();
+        String avatarPath="/avatars/"+userLogin+"/"+fileAsString.getFilename();
         user.setAvatarPath( avatarPath );
         user.setAge( oldUser.getAge() );
         user.setAvatarPath( avatarPath );

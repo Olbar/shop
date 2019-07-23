@@ -32,7 +32,7 @@
 
         <div id="feedback-box" class="wc-feedback-box">
             <div th:each="feedback : ${feedbacks}" class="wc-feedback">
-                <img id="image" th:src="${feedback.user.avatar}">
+                <img id="image" th:src="${user_details.avatarPath}">
                     <span class="wc-feedback-author" th:text="@{${feedback.user.name}+':'}"></span>
                 <span class="wc-feedback-text" th:text="${feedback.text}"></span>
             </div>
