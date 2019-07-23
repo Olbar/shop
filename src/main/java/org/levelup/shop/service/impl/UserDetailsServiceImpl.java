@@ -1,10 +1,12 @@
 package org.levelup.shop.service.impl;
 
+import org.levelup.shop.domain.dto.EntityData;
 import org.levelup.shop.domain.dto.FileAsString;
 import org.levelup.shop.domain.entity.UserDetailsEntity;
 import org.levelup.shop.repository.UserDetailsRepository;
 import org.levelup.shop.service.AuthorizationSessionService;
 import org.levelup.shop.service.UserDetailsService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +20,9 @@ import java.util.Base64;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+    @Value("${shop.attachments.avatars}")
+    private String avatarsDirectoryPath;
+
     private final AuthorizationSessionService authSessionService;
     private final UserDetailsRepository userDetailsRepository;
 
@@ -28,24 +33,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     @Transactional
-    public void updateAvatarUserDetails(String sid, FileAsString fileAsString, UserDetailsEntity userDetailsEntity, String avatarsDirectoryPath) throws IOException {
+    public void updateAvatarUserDetails(String sid, FileAsString fileAsString, EntityData entityData) throws IOException {
         Integer userId = authSessionService.findUserIdBySessionId(sid);
         String userLogin=authSessionService.findLoginBySessionId( sid );
+        UserDetailsEntity oldUser= userDetailsRepository.findByUserId(entityData.getUserId());
         UserDetailsEntity user = userDetailsRepository.findByUserId(userId);
-        user.setFirstName(userDetailsEntity.getFirstName());
-        user.setLastName( userDetailsEntity.getLastName() );
-        byte[] bytes = Base64.getDecoder().decode(fileAsString.getFile());
+        user.setFirstName(oldUser.getFirstName());
+        user.setLastName( oldUser.getLastName() );
         String avatarPath=avatarsDirectoryPath + userLogin+"/"+fileAsString.getFilename();
-        File file = new File(avatarsDirectoryPath + userLogin+"/"+fileAsString.getFilename());
-
-        try (BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(file))) {
-            outputStream.write(bytes);
-            outputStream.flush();
-        }
         user.setAvatarPath( avatarPath );
-        user.setAge( userDetailsEntity.getAge() );
+        user.setAge( oldUser.getAge() );
         user.setAvatarPath( avatarPath );
-        user.setAge( userDetailsEntity.getAge() );
+        user.setAge( oldUser.getAge() );
         userDetailsRepository.save(user);
 
     }

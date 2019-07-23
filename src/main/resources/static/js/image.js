@@ -24,18 +24,26 @@ $(document).ready(() => {
         fileAsString = fileAsString.replace(specialInfo, '');
 
 
-  const userData = {
+  const entityData = {
         userId: $('.user').attr('item-id')// get attribute value
     };
 
 
         $.ajax({
-            url: '/user_details/'+userData.userId,
-            type: 'PUT',
+            url: '/cabinet/string',
+            type: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify({ filename: filename, file: fileAsString })
+            data: JSON.stringify({ filename: filename, file: fileAsString})
         })
-            .done(() => {console.log('success');location.reload();})
+            .done(() => {console.log('success');
+
+                    $.ajax({
+                        url: '/user_details/'+entityData.userId,
+                        type: 'PUT',
+                        contentType: 'application/json',
+                        data: JSON.stringify(entityData)
+                    })
+            })
             .fail(() => { console.log('fail'); });
     });
 

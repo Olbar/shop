@@ -4,6 +4,7 @@ package org.levelup.shop.controller;
 
 
 
+import org.levelup.shop.domain.dto.EntityData;
 import org.levelup.shop.domain.dto.FileAsString;
 
 import org.levelup.shop.domain.entity.UserDetailsEntity;
@@ -63,9 +64,8 @@ public class CabinetController {
    @PutMapping("/user_details/{userId}")
 public String changeUserAvatar(@RequestBody FileAsString fileAsString,
                              @CookieValue("WC_SESSION") final String sid,
-                             @Valid @RequestBody UserDetailsEntity userDetailsEntity,
-                             String avatarsDirectoryPath) throws IOException {
-      userDetailsService.updateAvatarUserDetails( sid, fileAsString, userDetailsEntity, avatarsDirectoryPath);
+                               EntityData entityData) throws IOException {
+      userDetailsService.updateAvatarUserDetails( sid, fileAsString, entityData);
        return "cabinet";
    }
 
