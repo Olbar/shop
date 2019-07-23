@@ -1,9 +1,8 @@
 package org.levelup.shop.service.impl;
 
 
-import org.levelup.shop.domain.dto.Item;
-import org.levelup.shop.domain.entity.UserEntity;
 import org.levelup.shop.domain.dto.User;
+import org.levelup.shop.domain.entity.UserEntity;
 import org.levelup.shop.exception.ShopException;
 import org.levelup.shop.repository.UserDetailsRepository;
 import org.levelup.shop.repository.UserRepository;
@@ -15,8 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @Service
 public class UserServiceImpl extends AbstractService implements UserService {

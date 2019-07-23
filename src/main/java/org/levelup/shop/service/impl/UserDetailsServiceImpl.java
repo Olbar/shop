@@ -2,10 +2,13 @@ package org.levelup.shop.service.impl;
 
 import org.levelup.shop.domain.dto.EntityData;
 import org.levelup.shop.domain.dto.FileAsString;
+import org.levelup.shop.domain.dto.UserDetails;
 import org.levelup.shop.domain.entity.UserDetailsEntity;
+import org.levelup.shop.exception.ShopException;
 import org.levelup.shop.repository.UserDetailsRepository;
 import org.levelup.shop.service.AuthorizationSessionService;
 import org.levelup.shop.service.UserDetailsService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -18,7 +21,7 @@ import java.io.IOException;
 import java.util.Base64;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl extends AbstractService implements UserDetailsService {
 
     @Value("${shop.attachments.avatars}")
     private String avatarsDirectoryPath;
@@ -26,7 +29,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private final AuthorizationSessionService authSessionService;
     private final UserDetailsRepository userDetailsRepository;
 
-    public UserDetailsServiceImpl(AuthorizationSessionService authSessionService, UserDetailsRepository userDetailsRepository) {
+    public UserDetailsServiceImpl(AuthorizationSessionService authSessionService, UserDetailsRepository userDetailsRepository, ModelMapper modelMapper) {
+        super(modelMapper);
         this.authSessionService = authSessionService;
         this.userDetailsRepository = userDetailsRepository;
     }
@@ -47,5 +51,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         user.setAge( oldUser.getAge() );
         userDetailsRepository.save(user);
 
+    }
+
+
+    @Override
+    public UserDetails findUserDetailsById(Integer userId) {
+        return userDetailsRepository.findById( userId )
+                .map( entity -> modelMapper.map( entity, UserDetails.class ) )
+                .orElseThrow( ShopException::new );
     }
 }

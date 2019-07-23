@@ -28,7 +28,7 @@
 <div id="container">
     <div class="personnel">
         <h3>Аватар</h3>
-        <img class="image" id="image-viewer">
+        <img class="image" id="image-viewer" th:src="${user_details.avatarPath}" alt="аватар" title="аватар">
         <div id="form">
             <input type="file" class="form-img" id="image-input" accept="image/*" data-max/>
             <input type="hidden" class="form-img" id="image-input-data"/>

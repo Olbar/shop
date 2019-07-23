@@ -73,7 +73,7 @@ public String changeUserAvatar(@RequestBody FileAsString fileAsString,
     public  String displayCabinet(@CookieValue("WC_SESSION") final String sid, Model model){
         Integer userId = authSessionService.findUserIdBySessionId(sid);
         model.addAttribute( "user", userService.findById( userId ));
-        model.addAttribute( "user_details", userService.findUserDetailsById( userId ) );
+        model.addAttribute( "user_details", userDetailsService.findUserDetailsById( userId ) );
         return "cabinet";
     }
 
