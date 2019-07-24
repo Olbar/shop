@@ -21,7 +21,7 @@
     <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
 </header>
 <center>
-<div id="menu" class="top"> <a  href="/basket" ><img class="top" id="basket" src="/images/html/basket.png" alt="Корзина" th:title="Корзина"/></a><div th:text="@{'Категория: ' + ${category.name}}"></div><hr />
+    <a href=""><img  src="/images/html/back.png" type="button" id="back" class="back" alt="Назад" title="Назад" onclick="history.back(-1)"/></a><div id="menu" class="top"> <a  href="/basket" ><img class="top" id="basket" src="/images/html/basket.png" alt="Корзина" th:title="Корзина"/></a><div th:text="@{'Категория: ' + ${category.name}}"></div><hr />
     <h5 class="top" th:text="@{'Сумма к оплате:  '+${total}+' руб   '}"></h5>
 </div>
 </center>

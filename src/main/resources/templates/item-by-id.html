@@ -18,12 +18,10 @@
     <a href="/categories" title="На главную" id="logo">GREEN-LIFE</a><span class="contact"><a href="/about" title="Информация о нас">О нас</a></span>
     <span class="contact"><a href="/categories" title="Категории товаров">Категории</a></span>
     <span class="contact"><a href="/cabinet" title="Личный кабинет">Кабинет</a></span>
-    <span class="right"><span class="contact"><a href="/registration" title="Регистрация">Регистрация</a></span>
-    <span class="contact"><a href="/login" title="Вход в систему">Вход</a></span>
-    <span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
+    <span class="right"><span class="contact"><a href="/logout" title="Выход из системы">Выход</a></span></span>
 </header>
 <center>
-    <div id="menu"><h3 th:text="Отзывы"></h3><hr /></div>
+    <a href=""><img  src="/images/html/back.png" type="button" id="back" class="back" alt="Назад" title="Назад" onclick="history.back(-1)"/></a>  <div id="menu"><h3 th:text="Отзывы"></h3><hr /></div>
 </center>
 <div class="content">
 
@@ -32,7 +30,7 @@
 
         <div id="feedback-box" class="wc-feedback-box">
             <div th:each="feedback : ${feedbacks}" class="wc-feedback">
-                <img id="image" th:src="${user_details.avatarPath}">
+                <img id="image" th:src="${feedback.user.avatar}">
                     <span class="wc-feedback-author" th:text="@{${feedback.user.name}+':'}"></span>
                 <span class="wc-feedback-text" th:text="${feedback.text}"></span>
             </div>

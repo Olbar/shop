@@ -24,9 +24,6 @@ $(document).ready(() => {
         fileAsString = fileAsString.replace(specialInfo, '');
 
 
-  const entityData = {
-        userId: $('.user').attr('item-id')// get attribute value
-    };
 
 
         $.ajax({
@@ -36,6 +33,12 @@ $(document).ready(() => {
             data: JSON.stringify({ filename: filename, file: fileAsString})
         })
             .done(() => {console.log('success');
+
+              const entityData = {
+                    userId: $('.user').attr('item-id'), // get attribute value
+                    filename
+                };
+
 
                     $.ajax({
                         url: '/user_details/'+entityData.userId,

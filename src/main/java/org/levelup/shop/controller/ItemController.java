@@ -3,6 +3,7 @@ package org.levelup.shop.controller;
 
 import org.levelup.shop.domain.dto.FeedbackData;
 import org.levelup.shop.domain.dto.ItemData;
+import org.levelup.shop.repository.FeedbackRepository;
 import org.levelup.shop.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,14 +19,19 @@ public class ItemController {
     private final AdditionService additionService;
     private final UserDetailsService userDetailsService;
     private final AuthorizationSessionService authSessionService;
+    private final FeedbackRepository feedbackRepository;
+    private final UserService userService;
 
     @Autowired
-    public ItemController(FeedbackService feedbackService, ItemService itemService, AdditionService additionService, UserDetailsService userDetailsService, AuthorizationSessionService authSessionService) {
+    public ItemController(FeedbackService feedbackService, ItemService itemService, AdditionService additionService, UserDetailsService userDetailsService, AuthorizationSessionService authSessionService, FeedbackRepository feedbackRepository, UserService userService) {
         this.feedbackService = feedbackService;
         this.itemService = itemService;
         this.additionService = additionService;
         this.userDetailsService = userDetailsService;
         this.authSessionService = authSessionService;
+        this.feedbackRepository = feedbackRepository;
+
+        this.userService = userService;
     }
 
     @GetMapping
@@ -41,6 +47,8 @@ public class ItemController {
         model.addAttribute( "item", itemService.findById(itemId));
         model.addAttribute( "feedbacks",feedbackService.findAllFeedbacksForItem(itemId));
         model.addAttribute( "user_details",userDetailsService.findUserDetailsById(userId));
+     //   Integer userDetailsId = userDetailsService.findAll().iterator().next().getId();
+   //     model.addAttribute( "avatar",userDetailsService.findUserDetailsById( userDetailsId ).getAvatarPath());
         return "item-by-id";
     }
 

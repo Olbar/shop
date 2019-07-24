@@ -2,8 +2,10 @@ package org.levelup.shop.service.impl;
 
 import org.levelup.shop.domain.dto.EntityData;
 import org.levelup.shop.domain.dto.FileAsString;
+import org.levelup.shop.domain.dto.User;
 import org.levelup.shop.domain.dto.UserDetails;
 import org.levelup.shop.domain.entity.UserDetailsEntity;
+import org.levelup.shop.domain.entity.UserEntity;
 import org.levelup.shop.exception.ShopException;
 import org.levelup.shop.repository.UserDetailsRepository;
 import org.levelup.shop.service.AuthorizationSessionService;
@@ -19,6 +21,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Base64;
+import java.util.Collection;
 
 @Service
 public class UserDetailsServiceImpl extends AbstractService implements UserDetailsService {
@@ -59,5 +62,11 @@ public class UserDetailsServiceImpl extends AbstractService implements UserDetai
         return userDetailsRepository.findById( userId )
                 .map( entity -> modelMapper.map( entity, UserDetails.class ) )
                 .orElseThrow( ShopException::new );
+    }
+
+    @Override
+    public Collection<UserDetails> findAll() {
+        Iterable<UserDetailsEntity> iterable = userDetailsRepository.findAll();
+        return findAllEntities(iterable,UserDetails.class);
     }
 }
