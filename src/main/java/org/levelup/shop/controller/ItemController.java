@@ -47,8 +47,6 @@ public class ItemController {
         model.addAttribute( "item", itemService.findById(itemId));
         model.addAttribute( "feedbacks",feedbackService.findAllFeedbacksForItem(itemId));
         model.addAttribute( "user_details",userDetailsService.findUserDetailsById(userId));
-     //   Integer userDetailsId = userDetailsService.findAll().iterator().next().getId();
-   //     model.addAttribute( "avatar",userDetailsService.findUserDetailsById( userDetailsId ).getAvatarPath());
         return "item-by-id";
     }
 
