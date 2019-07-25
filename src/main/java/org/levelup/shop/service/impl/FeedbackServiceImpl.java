@@ -59,7 +59,6 @@ public class FeedbackServiceImpl extends AbstractService implements FeedbackServ
                 .collect( Collectors.toList() );
     }
 
-//iterator.next().getAuthor().getDetails().getAvatarPath()
     @Override
     @Transactional
     public Feedback saveFeedback(String sid, FeedbackData feedbackData) {
