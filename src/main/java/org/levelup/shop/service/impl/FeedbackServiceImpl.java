@@ -47,7 +47,10 @@ public class FeedbackServiceImpl extends AbstractService implements FeedbackServ
         Collection<Feedback> allEntities = findAllEntities( values, Feedback.class );
         Iterator<FeedbackEntity> iterator = values.iterator();
         return allEntities.stream()
-                .peek( entity -> entity.setUser( new UserAvatar( "/avatars/default.png", iterator.next().getAuthor().getFirstName()) ) )
+                .peek( entity -> {
+                    UserEntity author = iterator.next().getAuthor();
+                    entity.setUser( new UserAvatar(author.getDetails().getAvatarPath() , author.getFirstName()));
+                } )
                 .collect( Collectors.toList() );
     }
 
