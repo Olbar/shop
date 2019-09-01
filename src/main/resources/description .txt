@@ -1,0 +1,12 @@
+                                        ShopProject
+  This project was begun  in course “Java for juniors”.
+   Project has usual client-server architecture: Database + Server + Client.  As build management  tool was used Maven tool.
+  Database:  PostgreSQL 9.4
+  Server:  Java SPRING
+  Client:  jQuery+HTML+CSS.
+  For starting application uses  Spring boot starter web plugin(Tomcat).
+  At this moment application has following functionalities: Registration, Authorization, Logout, Choose Categories of items, Choose items, Put items into basket, Remove items out of basket, Checkout, Make an order, View comments for item, Leave a comment for item, Choose avatar in cabinet.
+
+
+
+
